@@ -1,0 +1,27 @@
+.banner { 
+    height: 40%;
+    width: 80vw;
+    background-color: rgba(147, 23, 42, 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    mix-blend-mode: color-dodge;
+  }
+  
+.text {
+      position: relative;
+      height: 60px;
+      align-content: center;
+      width: 70vw;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: white;
+  
+  
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 4rem;
+      font-style: italic;
+  }
