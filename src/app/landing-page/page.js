@@ -1,13 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import heroImg from "../../images/logo.webp";
-import rowImage from "../../images/arne-slot.jpg" 
+import rowImage from "../../images/arne-slot.jpg";
+import rowImage2 from "../../images/van-djik-edit.png";
 import fixturesImage from "../../images/fixtures-banner2.png";
 import { Nav } from "@/components/nav/nav";
 import { Hero } from "@/components/hero/hero";
 import { RowImage } from "@/components/row-image/row-image";
 import { FixturesImage } from "@/components/fixtures-image/fixtures-image";
 import { ScheduleTable } from "@/components/schedule-table/schedule-table";
+import { Carousel } from "@/components/carousel/carousel";
 
 export const metadata = {
   title: "Liverpool Landing Page - You Will Never Walk Alone",
@@ -17,19 +19,29 @@ export default function Page() {
   return (
     <main>
       <header>
-      <Nav/>
-       <Hero img={heroImg} />
+        <Nav />
+        <Hero img={heroImg} />
       </header>
-      <div className={styles.mantraContainer}> 
-        <h1 className={styles.mantra}>&quot;You Will Never Walk Alone.&quot;</h1>
+      <div className={styles.mantraContainer}>
+        <h1 className={styles.mantra}>
+          &quot;You Will Never Walk Alone.&quot;
+        </h1>
       </div>
       <section>
-        <RowImage img={rowImage} />
+        <RowImage img={rowImage} text={"Game Fixtures"} />
       </section>
-      <section height={"100vh"}>
+      <section>
         <FixturesImage img={fixturesImage}>
-                  <ScheduleTable/>
+          <ScheduleTable />
         </FixturesImage>
+      </section>
+      <section>
+        <div>
+          <RowImage img={rowImage2} text={"Squad Details"} />
+        </div>
+      </section>
+      <section>
+        <Carousel/>
       </section>
       <footer className={styles.footer}>
         <a
@@ -78,4 +90,3 @@ export default function Page() {
     </main>
   );
 }
- 
