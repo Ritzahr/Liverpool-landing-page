@@ -1,11 +1,24 @@
+import { PlayerCard } from "../player-card/player-card";
 import styles from "./carousel.module.css";
+import { players } from "@/assets/players-2024/roster";
 
-const Carousel = () => {
+
+const PlayerCarousel = () => {
   return (
-    <main className={styles.wrapper}>
-      <div className={styles.inner}></div>
-    </main>
+    <div className={styles.wrapper}>
+      <div className={styles.inner}>
+        {players.map((player)=>{
+          return <PlayerCard 
+            name={`${player.name}`} 
+            position={`${player.position}`} 
+            img={player.image}
+            key={`${player.name}-${player.image}`} 
+        />
+      })
+      }
+      </div>
+    </div>
   );
 };
 
-export { Carousel };
+export { PlayerCarousel };

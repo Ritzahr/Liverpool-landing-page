@@ -9,7 +9,7 @@ import { Hero } from "@/components/hero/hero";
 import { RowImage } from "@/components/row-image/row-image";
 import { FixturesImage } from "@/components/fixtures-image/fixtures-image";
 import { ScheduleTable } from "@/components/schedule-table/schedule-table";
-import { Carousel } from "@/components/carousel/carousel";
+import { PlayerCarousel } from "@/components/carousel/carousel";
 
 export const metadata = {
   title: "Liverpool Landing Page - You Will Never Walk Alone",
@@ -41,7 +41,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <Carousel/>
+        <PlayerCarousel/>
       </section>
       <footer className={styles.footer}>
         <a
