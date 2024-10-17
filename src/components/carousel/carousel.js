@@ -8,6 +8,7 @@ const PlayerCarousel = () => {
     <div className={styles.wrapper}>
       <div className={styles.gradientTop}>
         <div className={styles.inner}>
+          <div className={styles.cardRow}>
            {players.map((player)=>{
              return <PlayerCard 
              name={`${player.name}`} 
@@ -17,6 +18,10 @@ const PlayerCarousel = () => {
              />
             })
           }
+          </div>
+          <div className={styles.arrows}>
+            <div className={styles.arrowsContent}> *ARROWS HERE* </div>
+            </div>
           </div>
         <div className={styles.gradientBottom}></div>
       </div>
