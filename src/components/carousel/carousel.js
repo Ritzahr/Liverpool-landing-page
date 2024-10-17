@@ -6,7 +6,7 @@ import { players } from "@/assets/players-2024/roster";
 const PlayerCarousel = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.gradientBottom}>
+      <div className={styles.gradientTop}>
         <div className={styles.inner}>
            {players.map((player)=>{
              return <PlayerCard 
@@ -18,7 +18,7 @@ const PlayerCarousel = () => {
             })
           }
           </div>
-        <div className={styles.gradientTop}></div>
+        <div className={styles.gradientBottom}></div>
       </div>
     </div>
   );
