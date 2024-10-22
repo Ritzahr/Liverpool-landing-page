@@ -1,5 +1,5 @@
 import styles from "./schedule-table.module.css";
-import { gameSchedule } from '../../assets/prem-fixtures/game-schedule';
+import { gameSchedule } from '../../../assets/prem-fixtures/game-schedule';
 
 
 const ScheduleTable = () => {

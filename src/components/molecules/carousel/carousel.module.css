@@ -23,7 +23,7 @@
     right: 0; 
     display: flex;
     align-items: center;
-    width: 15%;
+    width: 11%;
     height: 100%;
     background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255)); 
     opacity: 100%;
@@ -47,7 +47,6 @@
     align-items: center;
     scroll-snap-type: x mandatory;
 }
-
 
 .arrows {
     flex-direction: column;
