@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import heroImg from "../../images/logo.webp";
@@ -10,10 +12,6 @@ import { RowImage } from "@/components/molecules/row-image/row-image";
 import { FixturesImage } from "@/components/atoms/fixtures-image/fixtures-image";
 import { ScheduleTable } from "@/components/atoms/schedule-table/schedule-table";
 import { PlayerCarousel } from "@/components/molecules/carousel/carousel";
-
-export const metadata = {
-  title: "Liverpool Landing Page - You Will Never Walk Alone",
-};
 
 export default function Page() {
   return (

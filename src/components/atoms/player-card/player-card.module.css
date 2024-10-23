@@ -1,15 +1,15 @@
 
 .card {
-    display: flex;
-    flex-direction: column;
-    border: thick ridge rgb(93, 19, 5);
-    border-width: 0.6rem;
-    border-radius: 5%;
-    width: 25%;
-    height: 85%;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0 2% 0;
+  display: flex;
+  flex-direction: column;
+  background: #f8f6f7;
+  border-radius: 5%;
+  width: 25%;
+  height: 85%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 2% 0;
+  box-shadow: 0 4px 23px 5px;
 }
 
 .card:hover {
@@ -33,19 +33,25 @@
 
 .img {
     justify-self: flex-end; 
-    border-radius: 50%;
+    border-radius: 8%;
     border: 0.5rem thick ridge darkred;
 }
 
 .infosection {
     display: flex; 
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%; 
-    height: 25%;
-    border-top: 0.2rem solid rgb(93, 19, 5);
-    font-size: large;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 80%; 
+    font-size: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.infosection > h1 { 
+  font-size: 150%;
+  font-weight: normal;
+}
+
+.infosection > p { 
+  font-weight: normal;
+}
