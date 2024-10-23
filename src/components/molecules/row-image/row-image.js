@@ -1,4 +1,4 @@
-import { Banner } from "../banner/banner";
+import { Banner } from "../../atoms/banner/banner";
 import styles from "./row-image.module.css"
 
 
