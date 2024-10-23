@@ -14,7 +14,6 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    background-color: white;
 }
 
 .gradientBottom {
@@ -67,12 +66,12 @@
 }
 
 .hologram {
-    display: none;
+    opacity: 0;
     height: 50%;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(233, 72, 72);
 }
 
 .hologramClicked { 
-    display: flex;
+    opacity: 100;
 }
