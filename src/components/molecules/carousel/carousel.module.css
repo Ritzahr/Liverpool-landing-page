@@ -1,11 +1,12 @@
 .wrapper {
     width: 100%;
     height: 95vh;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(to top, rgba(235, 9, 9, 0), rgb(63, 6, 185));
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 .inner {
@@ -31,8 +32,8 @@
 
 .gradientTop {
     position: relative;
-    width: 85%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     display: flex;
     align-items: flex-end;
@@ -66,12 +67,41 @@
 }
 
 .hologram {
-    opacity: 0;
+    opacity: 100;
     height: 50%;
     width: 100%;
-    background-color: rgb(233, 72, 72);
+    background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6));
 }
 
-.hologramClicked { 
-    opacity: 100;
+/* .hologram > img {
+    animation: fade-in 0.7s ease-in backwards;
+    }
+    .hologram > img { 
+        animation: fade-out 0.7s ease-out backwards;
+        } */
+        
+        .hologram .false {
+    animation: fade-in 0.7s ease-in backwards;
 }
+
+.hologram .true { 
+    animation: fade-out 0.7s ease-out backwards;
+}
+
+@keyframes fade-in { 
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out { 
+    0% { 
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
