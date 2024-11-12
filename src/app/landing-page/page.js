@@ -11,7 +11,7 @@ import { Hero } from "@/components/atoms/hero/hero";
 import { RowImage } from "@/components/molecules/row-image/row-image";
 import { FixturesImage } from "@/components/atoms/fixtures-image/fixtures-image";
 import { ScheduleTable } from "@/components/atoms/schedule-table/schedule-table";
-import { PlayerCarousel } from "@/components/molecules/carousel/carousel";
+import { Cardsection } from "@/components/molecules/card-section/card-section";
 
 export default function Page() {
   return (
@@ -39,7 +39,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <PlayerCarousel/>
+        <Cardsection/>
       </section>
       <footer className={styles.footer}>
         <a
