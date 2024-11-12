@@ -1,0 +1,33 @@
+.wrapper {
+    width: 100%;
+    height: 94vh;
+    background: linear-gradient(to top, rgba(235, 9, 9, 0), rgb(63, 6, 185));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+.gradientBottom {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    display: flex;
+    align-items: center;
+    width: 11%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255)); 
+    opacity: 100%;
+    z-index: 4;
+}
+
+.gradientTop {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}

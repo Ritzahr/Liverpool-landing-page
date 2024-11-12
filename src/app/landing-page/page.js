@@ -1,19 +1,17 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import heroImg from "../../images/logo.webp";
 import rowImage from "../../images/arne-slot.jpg";
 import rowImage2 from "../../images/van-djik-edit.png";
 import fixturesImage from "../../images/fixtures-banner2.png";
-import { Nav } from "@/components/nav/nav";
-import { Hero } from "@/components/hero/hero";
-import { RowImage } from "@/components/row-image/row-image";
-import { FixturesImage } from "@/components/fixtures-image/fixtures-image";
-import { ScheduleTable } from "@/components/schedule-table/schedule-table";
-import { PlayerCarousel } from "@/components/carousel/carousel";
-
-export const metadata = {
-  title: "Liverpool Landing Page - You Will Never Walk Alone",
-};
+import { Nav } from "@/components/atoms/nav/nav";
+import { Hero } from "@/components/atoms/hero/hero";
+import { RowImage } from "@/components/molecules/row-image/row-image";
+import { FixturesImage } from "@/components/atoms/fixtures-image/fixtures-image";
+import { ScheduleTable } from "@/components/atoms/schedule-table/schedule-table";
+import { Cardsection } from "@/components/molecules/card-section/card-section";
 
 export default function Page() {
   return (
@@ -41,7 +39,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <PlayerCarousel/>
+        <Cardsection/>
       </section>
       <footer className={styles.footer}>
         <a

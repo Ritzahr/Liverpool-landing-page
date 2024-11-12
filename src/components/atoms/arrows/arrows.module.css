@@ -1,0 +1,14 @@
+.arrows {
+    flex-direction: column;
+    border-radius: 10%;
+    width: 20%;
+    height: 10%; 
+    align-self: center;
+}
+
+.arrowsContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
