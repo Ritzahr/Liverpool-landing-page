@@ -1,6 +1,6 @@
 .section {
-  height: 90%;
-  width: 100%;
+  height: 90vh;
+  width: 100vw;
 }
 
 .hologramSection {
@@ -13,7 +13,7 @@
 }
 
 .hologramSection > img {
-  height: 220%;
+  height: 200%;
   z-index: -1;
 
 }
@@ -29,6 +29,9 @@
 
 
 .cardRow {
+  padding: 0 0 1.5rem;
+  width: 78vw;
+  justify-self: center;
   display: flex;
   height: 50%;
   overflow: scroll;
@@ -46,4 +49,12 @@
   to {
       opacity: 100%;
   }
+}
+
+.bottom {
+  background-color: #9d2323;
+  z-index: 0;
+  padding: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
 }

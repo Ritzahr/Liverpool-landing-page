@@ -3,7 +3,8 @@ import styles from './player-card.module.css';
 
 const PlayerCard = ({ name, position, img, handleClick }) => {
     return (
-      <main className={styles.card}
+      <main 
+      className={styles.card}
       onClick={() => handleClick(name)}
       >
           <div className={styles.contents}>
