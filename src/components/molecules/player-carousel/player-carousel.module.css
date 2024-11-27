@@ -29,6 +29,7 @@
 
 
 .cardRow {
+  padding: 0 0 1.5rem;
   width: 78vw;
   justify-self: center;
   display: flex;
@@ -51,8 +52,9 @@
 }
 
 .bottom {
+  background-color: #9d2323;
   z-index: 0;
-  padding: 1rem 0 1rem 0;
+  padding: 0 0 1rem 0;
   display: flex;
   justify-content: center;
 }

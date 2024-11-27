@@ -47,19 +47,19 @@
   }
 
   25% { 
-    color: rgb(158, 30, 10);
+    color: rgb(207, 203, 203);
     }
 
   50% { 
-    color: rgb(201, 32, 7);
+    color: rgb(224, 220, 219);
     }
 
   75% { 
-    color: rgb(232, 40, 11);
+    color: rgb(255, 255, 255);
     }
 
   100% {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
       transform: scale(1.5) ;
     }
 }

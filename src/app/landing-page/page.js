@@ -25,19 +25,13 @@ export default function Page() {
           &quot;You Will Never Walk Alone.&quot;
         </h1>
       </div>
-      <section>
         <RowImage img={rowImage} text={"Game Fixtures"} />
-      </section>
-      <section>
         <FixturesImage img={fixturesImage}>
           <ScheduleTable />
         </FixturesImage>
-      </section>
-      <section>
         <div>
           <RowImage img={rowImage2} text={"Squad Details"} />
         </div>
-      </section>
         <Cardsection/>
     </main>
   );

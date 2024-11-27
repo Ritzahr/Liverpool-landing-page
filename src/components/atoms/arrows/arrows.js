@@ -1,7 +1,7 @@
 import { ChevronDown } from "../chevron-down/chevron-down";
 import styles from "./arrows.module.css";
 
-const Arrow = ({arrowClick, cardClicked}) => {
+const Arrow = ({arrowClick}) => {
   return (
     <div className={styles.arrows}>
       <div className={styles.arrowsContent}>

@@ -6,7 +6,6 @@ const Cardsection = () => {
     <div className={styles.wrapper}>
     <div className={styles.gradientTop}>
       <PlayerCarousel />
-      <div className={styles.gradientBottom}></div>
     </div>
     </div>
   );
