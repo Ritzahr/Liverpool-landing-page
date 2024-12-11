@@ -16,16 +16,6 @@ const PlayerCarousel = () => {
     setFade('fadeIn')
   };
 
-  // const scroll = (direction, name) => {
-  //   setCardClicked(players.find((player) => player.name===name))
-
-  //   setScrollClicked(direction);
-  // };
-
-  //dont need the fade effect.
-  //Need to have scroll three cards down, without targetting a specific card.
-  
-
   useEffect(() => {
     setCurrentIndex(players.indexOf(cardClicked));
   },[cardClicked, scrollClicked]);
@@ -37,7 +27,6 @@ const PlayerCarousel = () => {
 
     if (direction==='right' && cardClicked && players.indexOf(cardClicked) !== players.length - 1) {
       cardClick(nextCard.name);
-      // scroll(direction, nextCard.name)
       allCards[currentIndex+1].scrollIntoView({ behavior: "smooth", block: "start" })
     } else if (direction==='left' && cardClicked && players.indexOf(cardClicked) !== 0) {
       cardClick(prevCard.name);
@@ -68,7 +57,6 @@ const PlayerCarousel = () => {
           {players.map((player) => {
             return (
               <PlayerCard
-                 
                   key={`${player.name}-${player.image}`}
                   name={`${player.name}`}
                   position={`${player.position}`}
