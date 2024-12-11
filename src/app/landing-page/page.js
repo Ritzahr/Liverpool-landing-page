@@ -1,9 +1,8 @@
 'use client';
 
-import Image from "next/image";
 import styles from "./page.module.css";
 import heroImg from "../../images/logo.webp";
-import rowImage from "../../images/arne-slot.jpg";
+import { teamImages } from "../../assets/images/misc/index";
 import rowImage2 from "../../images/van-djik-edit.png";
 import fixturesImage from "../../images/fixtures-banner2.png";
 import { Nav } from "@/components/atoms/nav/nav";
@@ -25,12 +24,12 @@ export default function Page() {
           &quot;You Will Never Walk Alone.&quot;
         </h1>
       </div>
-        <RowImage img={rowImage} text={"Game Fixtures"} />
+        <RowImage img={teamImages} text={"Game Fixtures"} />
         <FixturesImage img={fixturesImage}>
           <ScheduleTable />
         </FixturesImage>
         <div>
-          <RowImage img={rowImage2} text={"Squad Details"} />
+          <RowImage img={[rowImage2]} text={"Squad Details"} />
         </div>
         <Cardsection/>
     </main>

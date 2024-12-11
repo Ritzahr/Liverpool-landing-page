@@ -1,16 +1,15 @@
 .banner { 
     height: 40%;
     width: 80vw;
-    background-color: rgba(147, 23, 42, 70%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: rgba(147, 23, 42, 50%);
     position: absolute;
+    left: 12%;
+    bottom: 34%;
     mix-blend-mode: color-dodge;
   }
   
 .text {
-      position: relative;
+      position: absolute;
       height: 60px;
       align-content: center;
       width: 70vw;
@@ -18,7 +17,8 @@
       margin-left: auto;
       margin-right: auto;
       color: white;
-  
+      left: 12%;
+      bottom: 50%;
   
       font-family: Arial, Helvetica, sans-serif;
       font-weight: bold;
