@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 3.2rem 0 0;
+    height: 35vh;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    white-space: nowrap;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+.container > div {
+    border-top: solid thick rgb(62, 62, 62);
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.links > li {
+    padding: 0 10% 0;
+}
+
+.socials {
+    flex-direction: column;
+}
+
+.socials >  * {
+    padding: 20px 0 0;
+}
+
+.utilities  > ul { 
+    display: flex;
+    list-style: none;
+    width: 100%;
+    overflow: wrap;
+}
+
+.utilities > ul > li {
+    margin: 0 10px;
+    word-break: break-all;
+    
+}
