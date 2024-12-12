@@ -20,8 +20,6 @@ const RowImage = ({ img, text }) => {
             slidesPerView={1}
             autoplay={{duration: 2000}}
             effect='fade'
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             {img.map((a) => {
               return (
@@ -45,8 +43,3 @@ const RowImage = ({ img, text }) => {
 };
 
 export { RowImage };
-
-/* {
-  url: '/Users/dwayne.afadoh/Projects/liverpool-landing-page/src/images/img-edit1.webp'
-}
-  */
