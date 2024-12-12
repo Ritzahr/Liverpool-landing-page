@@ -1,3 +1,4 @@
+import { UtilLinks } from "@/components/atoms/util-links/util-links";
 import styles from "./footer.module.css";
 import { IconTray } from "@/components/atoms/icon-tray/icon-tray";
 
@@ -43,15 +44,7 @@ const Footer = () => {
         <h5>Follow Us</h5>
         <IconTray/> 
       </div>
-      <div className={styles.utilities}>
-       <ul>
-        {utilities.map((tag) => {
-          return (
-            <li>{tag}</li>
-          )
-        })}
-       </ul>
-      </div>
+      <UtilLinks links={utilities}/>
     </main>
   );
 };

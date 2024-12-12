@@ -1,0 +1,22 @@
+.utilities {
+    border-top: solid thick rgb(62, 62, 62);
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.utilities  > ul { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    height: 70%;
+}
+
+.utilities > ul > li {
+    margin: 0 10px;
+    color: gray;
+}
