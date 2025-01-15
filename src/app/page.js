@@ -27,9 +27,11 @@ export default function Home() {
       </div>
         <RowImage img={teamImages} text={"Game Fixtures"} />
         <FixturesImage img={fixturesImage}>
-        <ScheduleTable />
+          <ScheduleTable />
         </FixturesImage>
-        <RowImage img={[rowImage2]} text={"Squad Details"} />
+        <RowImage 
+          img={[rowImage2]} 
+          text={"Squad Details"} />
         <Cardsection/>
         <Footer/>
     </main>

@@ -16,7 +16,12 @@
     height: 70%;
 }
 
-.utilities > ul > li {
+.link > a {
     margin: 0 10px;
     color: gray;
+    text-decoration: none;
+}
+
+.link > a:hover {
+    color: white;
 }

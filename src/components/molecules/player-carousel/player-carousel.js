@@ -3,12 +3,12 @@ import { players } from "@/assets/players-2024/roster";
 import { useEffect, useRef, useState } from "react";
 import styles from './player-carousel.module.css';
 import { Arrow } from "@/components/atoms/arrows/arrows";
+import Image from "next/image";
 
 const PlayerCarousel = () => {
   const [fade, setFade]= useState(null);
   const [cardClicked, setCardClicked]= useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [scrollClicked, setScrollClicked] = useState(0);
   const playerRef = useRef(null);
 
   const cardClick = (name) => { 
@@ -18,7 +18,7 @@ const PlayerCarousel = () => {
 
   useEffect(() => {
     setCurrentIndex(players.indexOf(cardClicked));
-  },[cardClicked, scrollClicked]);
+  },[cardClicked]);
 
   const arrowClick = (direction) => {
     const allCards = playerRef.current.children;
@@ -36,18 +36,27 @@ const PlayerCarousel = () => {
   
   useEffect(() => {
     if (fade === "fadeIn") {
-      const timer = setTimeout(() => setFade(null), 500);
+      const timer = setTimeout(() => setFade(null), 1000);
       return () => clearTimeout(timer);
     }
   }, [fade]);
-
+  console.log(cardClicked)
   return (
     <main className={styles.section}>
       <div className={styles.hologramSection}>
         {cardClicked && (
-          <img 
-            className={`${styles.image} ${fade ? styles.fadeIn : ""}`} 
-            src={`${cardClicked.bodyImage.src}`} />
+          <>
+            <Image
+              className={`${styles.image} ${fade ? styles.fadeIn : ""}`} 
+              src={`${cardClicked.bodyImage.src}`} 
+              alt={`Image of ${cardClicked.bodyImage.src}`}
+              width={650}
+              height={960}
+            />
+            <div className={`${styles.bio} ${fade ? styles.bioFade : ""}`}>
+              <p>{cardClicked.bio}</p>
+            </div>
+          </>
           )}
       </div>
         <div 
@@ -68,8 +77,8 @@ const PlayerCarousel = () => {
         </div>
         <div className={styles.bottom}>
          <Arrow 
-          arrowClick={arrowClick}
-          cardClicked={cardClicked}
+            arrowClick={arrowClick}
+            cardClicked={cardClicked}
          />
         </div>
     </main>

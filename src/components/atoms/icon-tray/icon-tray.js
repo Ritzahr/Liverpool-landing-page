@@ -6,7 +6,15 @@ const IconTray = () => {
   return (
     <div className={styles.icons}>
       {icons.map((i) => {
-        return <Image src={i} a width={40} height={40} />;
+        return (
+         <Image 
+            src={i} 
+            alt={`${i} Icons`}
+            width={40} 
+            height={40}
+            key={`img-${i}`}
+          />
+      )
       })}
     </div>
   );

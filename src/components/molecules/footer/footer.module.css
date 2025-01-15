@@ -25,6 +25,10 @@
     padding: 0 10% 0;
 }
 
+.links > li:hover {
+    text-decoration: underline;
+}
+
 .socials {
     flex-direction: column;
     border-top: solid thick rgb(62, 62, 62);
