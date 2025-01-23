@@ -12,7 +12,7 @@ const UtilLinks = ({ links }) => {
             className={styles.link}
             key={`Link-${tag}`}
             >
-            <Link href="/test-page">{tag}</Link>
+            <Link href="/footer-utils-not-found">{tag}</Link>
           </li>
           );
         })}

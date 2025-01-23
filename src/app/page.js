@@ -16,7 +16,7 @@ import { Footer } from "@/components/molecules/footer/footer";
 export default function Home() {
   return (
     <main>
-      <header>
+      <header> 
         <Nav />
         <Hero img={heroImg} />
       </header>
