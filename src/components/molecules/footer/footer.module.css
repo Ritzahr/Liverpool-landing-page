@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 3.2rem 0 0;
+    height: 35vh;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    white-space: nowrap;
+    padding: 2.5rem 0 0 0;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.links > li {
+    padding: 0 10% 0;
+}
+
+.links > li:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    flex-direction: column;
+    border-top: solid thick rgb(62, 62, 62);
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials >  h5 {
+    padding: 20px 0 0;
+}

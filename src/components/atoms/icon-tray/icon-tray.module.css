@@ -1,0 +1,15 @@
+.icons { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0;
+}
+
+.icons > img {
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.icons > img:hover {
+    cursor: pointer;
+}
