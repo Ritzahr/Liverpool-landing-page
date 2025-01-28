@@ -1,16 +1,11 @@
-import { Banner } from "../../atoms/banner/banner";
 import Image from "next/image";
 import styles from "./squad-row.module.css";
-import 'swiper/css';
-import 'swiper/css/bundle';
-
 
 const SquadRow = ({ img }) => {
     return (
        <div className={styles.container} >
         <div className={styles.bannerWrap}> 
-          <p className={styles.text_1}>Squad</p>
-          <p className={styles.text_2}>Details</p>
+          <p className={styles.text}>Squad</p>
         </div>
         <div className={styles.inner}>
         <Image
