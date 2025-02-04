@@ -1,27 +1,36 @@
-.banner { 
-    height: 40%;
-    width: 80vw;
-    background-color: rgba(147, 23, 42, 50%);
-    position: absolute;
-    left: 12%;
-    bottom: 34%;
-    mix-blend-mode: color-dodge;
-  }
-  
 .text {
-      position: absolute;
-      height: 60px;
-      align-content: center;
-      width: 70vw;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      color: white;
-      left: 12%;
-      bottom: 50%;
-  
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 4rem;
-      font-style: italic;
+  position: absolute;
+  height: 60px;
+  align-content: center;
+  width: 70vw;
+  text-align: center;
+  color: white;
+  left: -9%;
+  bottom: 20%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16rem;
   }
+
+  .text-0 {
+    color: rgb(0, 255, 255);
+    line-height: 16%;
+    left: -15%;
+    bottom: 29%;
+  }
+
+/* Mention in Presentation: */  
+/* 
+  @keyframes colorSwap {
+    25% {
+      color: blueviolet;
+    }
+
+    75% {
+      color: rgba(3, 255, 83, 0.859);
+    }
+
+    100% {
+      color: rgb(0, 255, 255);
+    }
+  } */

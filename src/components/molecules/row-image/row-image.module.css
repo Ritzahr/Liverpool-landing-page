@@ -1,6 +1,6 @@
 .container { 
   width: 99.1vw;
-  height: 70vh;
+  height: 100vh;
   background-size: cover;
   background-position-y: 25%;
   display: flex;
@@ -36,6 +36,8 @@
   object-position: top;
 }
 
+
+/* Alternative method using CSS animation for the auto-slide */
 
 /* .row { 
     width: 100%;

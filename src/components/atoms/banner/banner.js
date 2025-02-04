@@ -1,12 +1,20 @@
 import styles from "./banner.module.css";
 
-const Banner = ({ text }) => {
+const Banner = ({ text, color }) => {
   return (
     <>
-    <p className={styles.text}>{ text }</p>
-    <div className={styles.banner}>
-    </div>
-    
+    {text.split(' ').map((word, i) => {
+      return ( 
+        <p 
+          className={`${styles.text} ${styles[`text-${i}`]}`}
+          key={`${word}-section`}
+          style={{color: color}}
+        >
+          { word }
+        </p>
+      );
+    })
+    }
     </>
   );
 };

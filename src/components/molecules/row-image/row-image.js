@@ -8,10 +8,9 @@ import 'swiper/css/bundle';
 
 
 const RowImage = ({ img, text }) => {
-    return (
-       <div className={styles.container} >
+  return (
+    <div className={styles.container} >
         <div className={styles.bannerWrap}> 
-          <Banner text={text}/>
         </div>
         <div className={styles.inner}>
           <Swiper
@@ -20,19 +19,25 @@ const RowImage = ({ img, text }) => {
             slidesPerView={1}
             autoplay={{duration: 2000}}
             effect='fade'
-          >
-            {img.map((a) => {
+            >
+            {img.map(({img, color}) => {
               return (
                 <SwiperSlide
-                  key={a.src}
+                  key={img.src}
                   className={styles.swiperSlide}
                 >
-                <Image
-                  src={a.src} 
-                  alt=''
-                  fill
-                  className={styles.images}
-                />
+                <div> 
+                  <Image
+                    src={img.src} 
+                    alt=''
+                    fill
+                    className={styles.images}
+                  />
+                   <Banner 
+                    color={color}
+                    text={text}
+                  />
+                </div>
                 </SwiperSlide>
             )}
           )}
