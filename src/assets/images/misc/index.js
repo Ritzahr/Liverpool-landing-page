@@ -5,6 +5,13 @@ import img4 from './img-edit4.webp';
 import img5 from './img-edit5.webp';
 import img6 from './img-edit6.webp';
 
-const teamImages = [img1, img2, img3, img4, img5, img6 ];
+const teamImages = [
+    {img: img1, title: "L. Diaz", color: "#33B899" },
+    {img: img2, title: "C. Jones", color: "#19D153" },
+    {img: img3, title: "A. Slot", color: "#2CB851" },
+    {img: img4, title: "M. Salah", color: "#B5457D" },
+    {img: img5, title: "K. Tsimikas", color: "#687168" },
+    {img: img6, title: "Squad", color: "#B23EC2" }
+];
 
 export { teamImages };

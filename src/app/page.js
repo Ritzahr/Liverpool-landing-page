@@ -18,14 +18,8 @@ export default function Home() {
   return (
     <main>
       <header> 
-        <Nav />
         <Hero img={heroImg} />
       </header>
-      <div className={styles.mantraContainer}>
-        <h1 className={styles.mantra}>
-          &quot;You Will Never Walk Alone.&quot;
-        </h1>
-      </div>
         <RowImage img={teamImages} text={"Game Fixtures"} />
         <FixturesImage img={fixturesImage}>
           <ScheduleTable />
