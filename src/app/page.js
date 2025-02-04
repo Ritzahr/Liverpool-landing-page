@@ -1,11 +1,9 @@
 'use client';
 
-import styles from "./page.module.css";
 import heroImg from "../images/logo.webp";
 import { teamImages } from "../assets/images/misc/index";
 import rowImage2 from "../images/van-djik-edit.png";
 import fixturesImage from "../images/fixtures-banner2.png";
-import { Nav } from "@/components/atoms/nav/nav";
 import { Hero } from "@/components/atoms/hero/hero";
 import { RowImage } from "@/components/molecules/row-image/row-image";
 import { FixturesImage } from "@/components/atoms/fixtures-image/fixtures-image";

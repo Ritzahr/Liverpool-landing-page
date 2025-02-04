@@ -4,7 +4,6 @@ const Banner = ({ text, color }) => {
   return (
     <>
     {text.split(' ').map((word, i) => {
-      console.log("THIS is the color:", color)
       return ( 
         <p 
           className={`${styles.text} ${styles[`text-${i}`]}`}
