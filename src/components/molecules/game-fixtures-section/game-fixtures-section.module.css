@@ -1,0 +1,287 @@
+.main {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.years_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 1000;
+  top: 20%;
+}
+
+.years {
+  font-size: 10%
+}
+
+.years:hover {
+  animation: boble 0.5s infinite ease-in-out alternate;
+  /*what was the ruleset used to make immediate hovering much smoother?*/
+}
+
+.active_2024 {
+  color: rgb(103, 244, 140);
+}
+
+.active_2024 > p {
+  font-size: 15rem;
+}
+
+.active_2025 {
+  color: rgb(103, 244, 140);
+}
+
+.active_2025 > p {
+  font-size: 15rem;
+}
+
+.year_shadow {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 15%;
+}
+
+
+.bar1 {
+  position: absolute;
+  width: 0.2%;
+  top: 0%;
+  height: 35%;
+  background-color: white;
+  animation: rally-bar1 5s ease;
+}
+
+.bar2 {
+  position: absolute;
+  bottom: 0%;
+  width: 25%;
+  height: 0.3%;
+  background-color: white;
+  animation: rally-bar2 17s ease infinite;
+}
+
+.bar3 {
+  position: absolute;
+  width: 0.2%;
+  right: 0%;
+  top: 150%;
+  height: 35%;
+  background-color: white;
+  animation: rally-bar3 35s ease infinite; 
+}
+
+.bar4 {
+  position: absolute;
+  bottom: 0%;
+  width: 25%;
+  height: 0.3%;
+  background-color: white;
+  animation: rally-bar2 5s ease;
+}
+
+@media (min-width: 1024px) {
+  .years_container {
+    gap: 4rem;
+  }
+  .years {
+    font-size: 10vw;
+  }
+}
+
+@keyframes boble {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rally-bar1 {
+  0% { 
+    left: 0%;
+    top: 0%;
+  }
+  100% {
+    left: 0%;
+    top: 105%;
+  }
+}
+
+@keyframes rally-bar2 {
+  0% { 
+    left: 0%;
+    bottom: 0%;
+    width: 25%;
+  }
+  100% {
+    left: 150%;
+    bottom: 0%;
+  }
+}
+
+@keyframes rally-bar3 {
+  0% { 
+    right: 0%;
+    top: 150%;
+  }
+  100% {
+    right: 0%;
+    top: -150%;
+  }
+}
+
+@keyframes rally-bar4 {
+  0% { 
+    left: 0%;
+    bottom: 0%;
+    width: 25%;
+  }
+  100% {
+    left: 105%;
+    bottom: 0%;
+  }
+}
+
+/* @keyframes rally-bar1 {
+  0% { 
+    left: 0%;
+    bottom: 90%;
+    width: 25%;
+    height: 1%;
+  }
+  5% { 
+    left: 0%;
+    bottom: 90%;
+    width: 1%;
+    height: 25%;
+  }
+  /* 10% { 
+    left: 0%;
+    bottom: 90%;
+    width: 15%;
+    height: 1%;
+  }
+  15% { 
+    left: 0%;
+    bottom: 90%;
+    width: 10%;
+    height: 1%;
+  }
+  20% { 
+    left: 0%;
+    bottom: 90%;
+    width: 5%;
+    height: 1%;
+  } */
+  /* 25% { */
+    /* left: 0%;
+    bottom: 0%;
+    width: 1%;
+    height: 25%;
+  }
+  30% {
+    width: 5%;
+    height: 1%;
+  }
+  31% {
+    width: 6%;
+    height: 1%;
+  }
+  32% {
+    width: 7%;
+    height: 1%;
+  }
+  33% {
+    width: 8%;
+    height: 1%;
+  }
+  34% {
+    width: 9%;
+    height: 1%;
+  }
+  35% {
+    width: 10%;
+    height: 1%;
+  }
+  36% {
+    width: 11%;
+    height: 1%;
+  }
+  37% {
+    width: 12%;
+    height: 1%;
+  }
+  38% {
+    width: 13%;
+    height: 1%;
+  }
+  39% {
+    width: 14%;
+    height: 1%;
+  }
+  40% {
+    width: 15%;
+    height: 1%;
+  }
+  41% {
+    width: 16%;
+    height: 1%;
+  }
+  42% {
+    width: 17%;
+    height: 1%;
+  }
+  43% {
+    width: 18%;
+    height: 1%;
+  }
+  44% {
+    width: 19%;
+    height: 1%;
+  }
+  45% {
+    width: 20%;
+    height: 1%;
+  }
+  46% {
+    width: 21%;
+    height: 1%;
+  }
+  47% {
+    width: 22%;
+    height: 1%;
+  }
+  48% {
+    width: 23%;
+    height: 1%;
+  }
+  49% {
+    width: 24%;
+    height: 1%;
+  }
+  50% {
+    left: 94%;
+    bottom: 0%;
+    width: 25%;
+    height: 1%;
+  }
+  75% {
+    left: 95%;
+    bottom: 90%;
+    width: 1%;
+    height:  25%;
+  }
+  100% {
+    left: 0%;
+    bottom: 90%;
+    width: 25%;
+    height: 1%;
+  }
+} */ 
