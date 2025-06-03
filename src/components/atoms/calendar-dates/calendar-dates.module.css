@@ -1,12 +1,15 @@
 .container {
+  /* animation: conveyor 5s; */
+  overflow: scroll;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.slideTray {
   display: flex;
-  justify-content: center;
   align-items: center;
   color: white;
-  position: absolute;
-  top: 82%;
   gap: 2rem;
-  /* animation: conveyor 5s; */
 }
 
 .months {
@@ -17,13 +20,13 @@
   opacity: 0.5;
 }
 
+.months:hover {
+  opacity: 1;
+}
+
 .container_active {
   display: flex;
 }
-/* 
-.active {
-  opacity: 1;
-} */
 
 .active1 {
   opacity: 1;

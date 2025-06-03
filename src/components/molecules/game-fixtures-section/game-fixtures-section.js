@@ -11,7 +11,7 @@ const GameFixturesSection = () => {
 
   const expandCalendar = ({target}) => {
     setRange(null)
-    if (clickedYear){
+    if (clickedYear) {
       setClickedYear(null)
     }
     else { 
@@ -27,11 +27,7 @@ const GameFixturesSection = () => {
     <div className={styles.main}>
       <div className={styles.years_container}>
         <div
-          className={
-            `${styles.years} ${clickedYear === "2024" ?
-              styles.active_2024 : ""
-             }
-          `}
+          className={`${styles.years} ${clickedYear === "2024" ? styles.active_2024 : ""}`}
           onClick={expandCalendar}
         >
           {clickedYear === "2024" ? (
@@ -57,10 +53,6 @@ const GameFixturesSection = () => {
         </div>
       </div>
       <CalendarDates range={range}/>
-      <div className={styles.bar1}></div>
-      <div className={styles.bar2}></div>
-      <div className={styles.bar3}></div>
-      {/* <div className={styles.bar4}></div> */}
     </div>
   )
 };
