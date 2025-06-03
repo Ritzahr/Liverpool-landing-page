@@ -11,6 +11,7 @@ import { ScheduleTable } from "@/components/atoms/schedule-table/schedule-table"
 import { Cardsection } from "@/components/molecules/card-section/card-section";
 import { Footer } from "@/components/molecules/footer/footer";
 import { SquadRow } from "@/components/molecules/squad-row/squad-row";
+import { GameFixturesSection } from "@/components/molecules/game-fixtures-section/game-fixtures-section";
 
 export default function Home() {
   return (
@@ -19,9 +20,7 @@ export default function Home() {
         <Hero img={heroImg} />
       </header>
         <RowImage img={teamImages} text={"Game Fixtures"} />
-        <FixturesImage img={fixturesImage}>
-          <ScheduleTable />
-        </FixturesImage>
+        <GameFixturesSection/>
         <SquadRow img={[rowImage2]} />
         <Cardsection/>
         <Footer/>

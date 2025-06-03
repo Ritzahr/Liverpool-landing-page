@@ -1,0 +1,16 @@
+apiVersion: skaffold/v4beta12
+kind: Config
+metadata:
+  name: liverpool-landing-page
+build:
+  artifacts:
+    - image: package-json-image
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
+manifests:
+  rawYaml:
+    - deployment.yaml
+portForward:
+  - resourceType: service
+    resourceName: package-json-image
+    port: 5000
