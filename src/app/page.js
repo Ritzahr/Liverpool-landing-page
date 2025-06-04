@@ -1,5 +1,6 @@
 'use client';
 
+import styles from './page.module.css';
 import heroImg from "../images/logo.webp";
 import { teamImages } from "../assets/images/misc/index";
 import rowImage2 from "../images/van-djik-edit.png";
@@ -15,15 +16,15 @@ import { GameFixturesSection } from "@/components/molecules/game-fixtures-sectio
 
 export default function Home() {
   return (
-    <main>
-      <header> 
-        <Hero img={heroImg} />
-      </header>
-        <RowImage img={teamImages} text={"Game Fixtures"} />
-        <GameFixturesSection/>
-        <SquadRow img={[rowImage2]} />
-        <Cardsection/>
-        <Footer/>
+    <main> 
+      <div className={styles.container}> 
+          <Hero img={heroImg} />
+          <RowImage img={teamImages} text={"Game Fixtures"} />
+          <GameFixturesSection/>
+          <SquadRow img={[rowImage2]} />
+          <Cardsection/>
+      </div>
+      <Footer/>
     </main>
   );
 }
