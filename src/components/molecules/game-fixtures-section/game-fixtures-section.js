@@ -1,12 +1,13 @@
-import { CalendarDates } from '@/components/atoms/calendar-dates/calendar-dates';
 import styles from './game-fixtures-section.module.css';
+import { CalendarDates } from '@/components/atoms/calendar-dates/calendar-dates';
 import { useState, useEffect } from 'react';
-import { getClassnames } from '@/utils/style';
-
+import { Years } from '@/components/atoms/years';
+import { months } from '@/app/config/variables';
+import { FixtureHud } from '@/components/molecules/fixture-hud';
 
 const GameFixturesSection = () => {
   const [clickedYear, setClickedYear] = useState(null);
-  const [activeYear, setActiveYear] = useState(null);
+  const [clickedMonth, setClickedMonth] = useState(null);
   const [range, setRange] = useState(null);
 
   const expandCalendar = ({target}) => {
@@ -16,43 +17,30 @@ const GameFixturesSection = () => {
     }
     else { 
       setClickedYear(target.innerHTML);
-        setRange(target.innerHTML);
+      setRange(target.innerHTML);
     }
   };
 
+  const showGames = ({target}) => {
+      setClickedMonth(target.innerHTML)
+  }
+
   useEffect(() => {
+    setClickedMonth(null)
   }, [clickedYear])
   
   return (
     <div className={styles.main}>
-      <div className={styles.years_container}>
-        <div
-          className={`${styles.years} ${clickedYear === "2024" ? styles.active_2024 : ""}`}
-          onClick={expandCalendar}
-        >
-          {clickedYear === "2024" ? (
-            <p className={styles.year_shadow}>2024</p> ) : null
-          }
-          <p>2024</p> 
-        </div>
-        <div 
-          className={
-            `${styles.years} ${clickedYear === "2025" ?
-              styles.active_2025 : ""
-              }
-            `} 
-          onClick={expandCalendar}
-        >
-          {clickedYear === "2025" ? (
-            <p className={styles.year_shadow}>
-              2025
-            </p>
-            ) : null
-          }
-          <p>2025</p>
-        </div>
-      </div>
-      <CalendarDates range={range}/>
+      <Years
+        expand={expandCalendar}
+        clickedYear={clickedYear}
+      />
+      <CalendarDates
+        range={range}
+        months={months}
+        showGames={showGames}
+      />
+      <FixtureHud month={clickedMonth} setClickedMonth={setClickedMonth}/>
     </div>
   )
 };

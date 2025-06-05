@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.game {
+  display: flex;
+  gap: 2rem;
+  font-family: helvetica;
+  color: #fffafb;
+  font-size: 30px;
+  align-items: center;
+}
+
+.game > p:first-child {
+  font-size: 40px;
+}
