@@ -46,11 +46,11 @@
   display: none;
 }
 
-
 @media (min-width: 1024px) {
   .years_container {
     gap: 4rem;
   }
+
   .years {
     font-size: 10vw;
   }

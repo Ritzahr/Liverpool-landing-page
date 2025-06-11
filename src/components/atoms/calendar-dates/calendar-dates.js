@@ -1,17 +1,14 @@
 import styles from "./calendar-dates.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const CalendarDates = ({ range, months, showGames }) => {
   const [activeDate, setActiveDate] = useState(null);
   const [selectedMonth, setSelectedMonth] = useState(null);
 
-  const dateClick = (e, i) => {
-    setSelectedMonth(e.target.innerHTML);
-    setActiveDate(e.target.innerHTML);
+  const dateClick = ({target}) => {
+    setSelectedMonth(target.innerHTML);
+    setActiveDate(target.innerHTML);
   }
-  
-  useEffect(()=>{
-  }, [activeDate]);
 
   return (
     <div className={styles.container}>
@@ -20,7 +17,7 @@ const CalendarDates = ({ range, months, showGames }) => {
           return (
             <div 
               className={styles.months}
-              key={`${month}-div`}
+              key={`${month}-div1-container`}
               onClick={showGames}
             >
               <p 
@@ -30,13 +27,12 @@ const CalendarDates = ({ range, months, showGames }) => {
                 {month}
               </p>
             </div>
-                )
-              }) : months.slice(5, -2).map((month, i) => {
+              )}) : months.slice(5, -2).map((month) => {
                 return (
                   <div 
                     className={`${styles.months} ${activeDate ? styles.active : ''}`}
-                    key={`${i}-div2`}
-                    onClick={(e) => dateClick(e, i)}
+                    key={`${month}-div2-container`}
+                    onClick={dateClick}
                   >
                     <p
                       onClick={showGames}
