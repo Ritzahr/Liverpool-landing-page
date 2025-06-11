@@ -2,31 +2,34 @@ import { FixtureCard } from '@/components/atoms/fixture-card';
 import styles from './fixture-hud.module.css';
 import { gameSchedule } from '@/assets/prem-fixtures/game-schedule';
 
-const FixtureHud = ({month, setClickedMonth}) => {
+const FixtureHud = ({month, setClickedMonth, setIsHovering, setHoveredTeam, isHovering}) => {
   const closeHud = () => {
     setClickedMonth(null)
   }
  return (
-  <div className={`${styles.container} ${month ? styles.active : ''}`}>
-    <button
-      className={styles.exit}
-      onClick={closeHud}
+   <div className={`${month ? styles.true : styles.false} ${isHovering ? styles.active : ''}`}>
+      <button
+        className={styles.exit}
+        onClick={closeHud}
       >
-      X
-    </button>
-    <ul className={styles.games}>
-      {
-        gameSchedule.map((game) => {
-          if (game.month.includes(month))
-          return (
+        X
+      </button>
+      <ul className={styles.games}>
+        {
+          gameSchedule.map((game) => {
+            if (game.month.includes(month))
+              return (
             <FixtureCard 
-              key={month}
-              games={game.games}
+            key={month}
+            games={game.games}
+            setIsHovering={setIsHovering}
+            setHoveredTeam={setHoveredTeam}
+            isHovering={isHovering}
             />
           )
         })
       }
-    </ul>
+      </ul>
   </div>
  )
 }

@@ -17,7 +17,6 @@
 
 .years:hover {
   animation: boble 0.5s infinite ease-in-out alternate;
-  /*what was the ruleset used to make immediate hovering much smoother?*/
 }
 
 .active_2024 {
@@ -41,6 +40,10 @@
   color: white;
   z-index: 1;
   top: 15%;
+}
+
+.hide {
+  display: none;
 }
 
 

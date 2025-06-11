@@ -1,13 +1,26 @@
 import styles from './fixture-card.module.css';
+import { useState } from 'react';
+import Image from 'next/image';
 
-const FixtureCard = ({games}) => {
-  return ( 
+const FixtureCard = ({games, setIsHovering, setHoveredTeam}) => {
+  const onMouseEnter = ({target}) => {
+    const team = target.children[1].innerHTML;
+
+    console.log(team)
+    setHoveredTeam(team)
+    setIsHovering(true)
+  };
+  const onMouseLeave = () => setIsHovering(false);
+
+  return (  
     <div className={styles.container}>
       {games.map((game) => {
         return (
           <div
-            className={styles.game}
-            key={`fixture-${game.team}`}
+          className={styles.game}
+          key={`fixture-${game.team}`}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
           >
             <p>{game.date}</p>
             <p>{game.team}</p>
@@ -15,7 +28,7 @@ const FixtureCard = ({games}) => {
           </div>
         )
       })}
-    </div>
+      </div>
   )
 
 };

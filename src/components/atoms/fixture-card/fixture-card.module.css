@@ -19,3 +19,7 @@
 .game > p:first-child {
   font-size: 40px;
 }
+
+.game:hover {
+  color: rgb(103, 244, 140); 
+}

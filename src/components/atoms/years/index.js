@@ -1,8 +1,8 @@
 import styles from './years.module.css';
 
-const Years = ({ expand, clickedYear }) => {
+const Years = ({ expand, clickedYear, isHovering }) => {
   return (
-   <div className={styles.years_container}>
+   <div className={`${styles.years_container} ${isHovering ? styles.hide : ''}`}>
         <div
           className={`${styles.years} ${clickedYear === "2024" ? styles.active_2024 : ""}`}
           onClick={expand}
