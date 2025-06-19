@@ -21,5 +21,6 @@
 }
 
 .game:hover {
-  color: rgb(103, 244, 140); 
+  color: rgb(103, 244, 140);
+  cursor: default;
 }

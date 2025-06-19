@@ -15,7 +15,7 @@ const IconTray = () => {
             key={`img-icon${icon}`}
           />
         )
-      })}
+      })}x
     </div>
   );
 };

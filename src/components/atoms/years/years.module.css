@@ -17,6 +17,7 @@
 
 .years:hover {
   animation: boble 0.5s infinite ease-in-out alternate;
+  cursor: pointer;
 }
 
 .active_2024 {
