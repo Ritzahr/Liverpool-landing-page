@@ -1,34 +1,14 @@
 import styles from "./calendar-dates.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const months = [
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-];
-
-const CalendarDates = ({ range }) => {
+const CalendarDates = ({ range, months, showGames }) => {
   const [activeDate, setActiveDate] = useState(null);
+  const [selectedMonth, setSelectedMonth] = useState(null);
 
-  let className;
-
-  const dateClick = (e, i) => {
-    setActiveDate(e.target.innerHTML);
-    console.log(activeDate);
+  const dateClick = ({target}) => {
+    setSelectedMonth(target.innerHTML);
+    setActiveDate(target.innerHTML);
   }
-
-  useEffect(()=>{
-
-  }, [activeDate]);
 
   return (
     <div className={styles.container}>
@@ -36,27 +16,33 @@ const CalendarDates = ({ range }) => {
         {range ? range === "2024" ? months.slice(0, 5).map((month) => {
           return (
             <div 
-            className={styles.months}
-            key={`${month}-div`}
+              className={styles.months}
+              key={`${month}-div1-container`}
+              onClick={showGames}
             >
-                    {month}
-                  </div>
-                )
-              })
-              : months.slice(5).map((month, i) => {
+              <p 
+                onClick={dateClick}
+                className={month.includes(selectedMonth) ? styles.opacity100 : styles.opacity50}  
+              >
+                {month}
+              </p>
+            </div>
+              )}) : months.slice(5, -2).map((month) => {
                 return (
                   <div 
-                  className={`${styles.months} ${activeDate ? styles.active : ''}`}
-                  key={`${i}-div2`}
-                  onClick={(e) => dateClick(e, i)}
+                    className={`${styles.months} ${activeDate ? styles.active : ''}`}
+                    key={`${month}-div2-container`}
+                    onClick={dateClick}
                   >
-                    <p>
+                    <p
+                      onClick={showGames}
+                      className={month.includes(selectedMonth) ? styles.opacity100 : styles.opacity50}  
+                    >
                       {month}
                     </p>
                   </div>
                 )
-              })
-              : null}
+              }) : null}
         </div>
     </div>
   );
