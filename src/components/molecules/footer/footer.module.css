@@ -1,44 +1,57 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    margin: 3.2rem 0 0;
-    height: 35vh;
-    background-color: black;
-    color: white;
-    align-items: center;
-    justify-content: space-evenly;
-    white-space: nowrap;
-    padding: 2.5rem 0 0 0;
-
-    font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 3.2rem 0 0;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  white-space: nowrap;
+  padding: 2.5rem 0;
+  gap: 1rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 .links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    font-weight: 600;
-    font-size: 18px;
+  display: inline-block;
+  columns: 2;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .links > li {
-    padding: 0 10% 0;
+  margin: 0 0 1rem 2rem;
 }
 
 .links > li:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .socials {
-    flex-direction: column;
-    border-top: solid thick rgb(62, 62, 62);
-    width: 80%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  border-top: solid thick rgb(62, 62, 62);
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.socials >  h5 {
-    padding: 20px 0 0;
+.socials > h5 {
+  padding: 20px 0 0;
+}
+
+@media (min-width: 1024px) { 
+  .links {
+    display: flex;
+    flex-direction: row;
+    columns: 1;
+  }
+  .links > li {
+    margin: 0 3rem;
+  }
 }

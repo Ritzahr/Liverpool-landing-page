@@ -9,14 +9,15 @@
   font-style: italic;
   font-weight: 1000;
   top: 20%;
+  gap: 10%;
 }
 
 .years {
-  font-size: 10%
+  font-size: 4rem;
+  animation: boble 2s infinite ease-in-out alternate;
 }
 
 .years:hover {
-  animation: boble 0.5s infinite ease-in-out alternate;
   cursor: pointer;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .active_2024 > p {
-  font-size: 15rem;
+  font-size: 4rem;
 }
 
 .active_2025 {
@@ -33,7 +34,7 @@
 }
 
 .active_2025 > p {
-  font-size: 15rem;
+  font-size: 4rem;
 }
 
 .year_shadow {
@@ -47,18 +48,63 @@
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .years_container {
-    gap: 4rem;
-  }
-
-  .years {
-    font-size: 10vw;
-  }
-}
-
 @keyframes boble {
   100% {
     transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .years_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 1000;
+    top: 20%;
+    gap: 5%;
+  }
+
+  .years {
+    font-size: 10%
+  }
+
+  .years:hover {
+    cursor: pointer;
+  }
+
+  .active_2024 {
+    color: rgb(103, 244, 140);
+  }
+
+  .active_2024 > p {
+    font-size: 15rem;
+  }
+
+  .active_2025 {
+    color: rgb(103, 244, 140);
+  }
+
+  .active_2025 > p {
+    font-size: 15rem;
+  }
+
+  .year_shadow {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    top: 15%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .years {
+      font-size: 10vw;
   }
 }
