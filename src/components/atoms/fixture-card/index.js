@@ -1,6 +1,6 @@
 import styles from './fixture-card.module.css';
 
-const FixtureCard = ({games, setIsHovering, setHoveredTeam}) => {
+const FixtureCard = ({games, setIsHovering, setHoveredTeam, setClickedMonth}) => {
   const onMouseEnter = ({target}) => {
     const team = target.children[1].innerHTML;
     setHoveredTeam(team)
@@ -9,8 +9,15 @@ const FixtureCard = ({games, setIsHovering, setHoveredTeam}) => {
 
   const onMouseLeave = () => setIsHovering(false);
 
+  const closeHud = () => {
+    setClickedMonth(null);
+  };
+
   return (  
     <div className={styles.container}>
+       <div className={styles.exit} onClick={closeHud}>
+        X
+      </div>
       {games.map((game) => {
         return (
           <div

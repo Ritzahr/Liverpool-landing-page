@@ -2,16 +2,19 @@
   overflow-x: scroll;
   scrollbar-width: none;
   width: 100%;
-  height: 12rem;
+  z-index: 1;
+  scroll-snap-type: x mandatory;
 }
 
 .slideTray {
   display: flex;
-  justify-content: center;
   align-items: center;
   color: white;
   gap: 4rem;
-  height: 15rem;
+}
+
+.slideTray > * {
+  scroll-snap-align: center;
 }
 
 .slideTray > *:hover {
@@ -21,11 +24,21 @@
 .months {
   font-size: 8rem;
   font-family: Helvetica;
+  animation: fade-in 0.4s ease-in-out;
+}
+
+.months:first-child {
+  padding: 0 0 0 2rem;
+}
+
+.months:last-child {
+  padding: 0px 4rem 0 0rem;
 }
 
 .opacity100 {
   opacity: 1;
-  font-size: 12rem;
+  font-size: 10rem;
+  transition: font-size 0.4s;
   color:rgb(103, 244, 140);
 }
 
@@ -37,12 +50,28 @@
   display: flex;
 }
 
-@keyframes slidein {
-  0% {
+@keyframes fade-in {
+  from {
     opacity: 0;
   }
-  
-  100% {
-    opacity: 1;
+  to {
+    opacity: 100;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    overflow-x: none;
+    scrollbar-width: none;
+    height: 15rem;
+  }
+
+  .slideTray {
+    justify-content: center;
+    height: 100%;
+  }
+
+  .opacity100 {
+    font-size: 12rem;
   }
 }

@@ -2,25 +2,58 @@
   height: 100%;
   display: flex;
   width: 100%;
-  gap: 1.5rem;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .game {
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
   font-family: helvetica;
   color: rgb(255, 250, 251);
-  font-size: 30px;
+  font-size: 22px;
   align-items: center;
 }
 
 .game > p:first-child {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .game:hover {
   color: rgb(103, 244, 140);
   cursor: default;
+}
+
+.exit {
+  position: absolute;
+  top: 5%;
+  left: 88%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 15%;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.exit:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    gap: 1.5rem;
+  }
+
+  .game {
+    font-size: 30px;
+    justify-content: flex-start;
+  }
+
+  .game > p:first-child {
+    font-size: 40px;
+  }
 }
