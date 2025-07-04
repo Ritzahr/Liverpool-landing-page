@@ -1,18 +1,20 @@
 .container { 
   width: 100%;
-  height: 100vh;
+  height: 38vh;
   background-size: cover;
   background-position-y: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  background: linear-gradient(1deg, #000000, #4f0a14)
 }
 
 .inner { 
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0%;
   z-index: 1;
 }
 
@@ -21,18 +23,25 @@
   height: 100%;
 }
 
-.bannerWrap {
-  height: 60%;
-  z-index: 2;
-}
-
 .swiperSlide {
   position: relative;
 }
 
 .images {
+  display: none;
   object-fit: cover;
   object-position: top;
+}
+
+@media (min-width: 1024px) {
+  .container { 
+    width: 100%;
+    height: 100vh;
+  }
+
+  .images {
+    display: inline-block;
+  }
 }
 
 
