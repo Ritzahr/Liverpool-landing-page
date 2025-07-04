@@ -5,19 +5,32 @@
   width: 70vw;
   text-align: center;
   color: white;
-  left: -9%;
-  bottom: 20%;
+  left: 0%;
+  bottom: 5%;
 
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16rem;
+  font-size: 5rem;
+  }
+
+.text-0 {
+  color: rgb(0, 255, 255);
+  line-height: 16%;
+  left: -9%;
+  bottom: 20%;
+}
+
+@media (min-width: 1024px) {
+  .text {
+    font-size: 16rem;
+    left: -9%;
+    bottom: 20%;
   }
 
   .text-0 {
-    color: rgb(0, 255, 255);
-    line-height: 16%;
     left: -15%;
     bottom: 29%;
   }
+}
 
 /* Mention in Presentation: */  
 /* 
