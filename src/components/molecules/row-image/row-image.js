@@ -10,8 +10,6 @@ import 'swiper/css/bundle';
 const RowImage = ({ img, text }) => {
   return (
     <div className={styles.container} >
-        <div className={styles.bannerWrap}> 
-        </div>
         <div className={styles.inner}>
           <Swiper
             modules={[Autoplay, EffectFade]}
