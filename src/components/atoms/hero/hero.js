@@ -7,8 +7,10 @@ const Hero = ({ img }) => {
     <div className={styles.hero}>
       <Image 
         src={img.src}
-        fill
         alt={"liverpool_banner"}
+        className={styles.image}
+        width={500}
+        height={500}
       />
       <div className={styles.intro}>
         <p> 

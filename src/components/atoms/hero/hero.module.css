@@ -9,15 +9,21 @@
   background-image: linear-gradient(rgba(107,16,27,1), 20%, rgba(255,0,0,0));
 }
 
+.image {
+  object-fit: fill;
+  object-position: bottom right;
+  /* width: auto; */
+}
+
 .mantraContainer {
   opacity: 40%;
   position: absolute;
   bottom: 0%;
-  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
+  height: 20vh;
   width: 100%;
   background-image: linear-gradient(rgba(107, 16, 27, 98%), 50%, rgb(0 0 0));
 }
@@ -73,6 +79,9 @@
 }
 
 @media (min-width: 1024px) {
+.hero {
+  width: 100%;
+}
 
 .mantraContainer {
     background-image: linear-gradient(rgba(107,16,27,98%), 50%, rgba(255,0,0,0));
