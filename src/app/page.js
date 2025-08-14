@@ -5,7 +5,7 @@ import heroImg from "../images/logo.webp";
 import { teamImages } from "../assets/images/misc/index";
 import rowImage2 from "../images/van-djik-edit.png";
 import fixturesImage from "../images/fixtures-banner2.png";
-import { Hero } from "@/components/atoms/hero/hero";
+import { Hero } from "@/components/organisms/hero/hero";
 import { RowImage } from "@/components/molecules/row-image/row-image";
 import { FixturesImage } from "@/components/atoms/fixtures-image/fixtures-image";
 import { ScheduleTable } from "@/components/atoms/schedule-table/schedule-table";
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main> 
       <div className={styles.container}> 
-          <Hero img={heroImg} />
+          <Hero img={heroImg} title={"The Official Unofficial Liverpool Football Club Landing Page!"}/>
           <RowImage img={teamImages} text={"Game Fixtures"} />
           <GameFixturesSection/>
           <SquadRow img={[rowImage2]} />
