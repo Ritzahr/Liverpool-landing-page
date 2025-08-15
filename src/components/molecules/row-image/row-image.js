@@ -17,17 +17,17 @@ const RowImage = ({ img, text }) => {
             slidesPerView={1}
             autoplay={{duration: 2000}}
             effect='fade'
-            >
+          >
             {img.map(({img, color}) => {
               return (
                 <SwiperSlide
                   key={img.src}
                   className={styles.swiperSlide}
                 >
-                <div> 
+                <div>
                   <Image
                     src={img.src} 
-                    alt=''
+                    alt={img.title}
                     fill
                     className={styles.images}
                   />
