@@ -1,17 +1,17 @@
-import img1 from './img-edit1.webp';
-import img2 from './img-edit2.webp';
-import img3 from './img-edit3.webp';
+import img1 from './img-edit10.jpg';
+import img2 from './img-edit8.jpg';
+import img3 from './img-edit11.jpg';
 import img4 from './img-edit4.webp';
-import img5 from './img-edit5.webp';
-import img6 from './img-edit6.webp';
+import img5 from './img-edit9.webp';
+import img6 from './img-edit7.jpg';
 
 const teamImages = [
-    {img: img1, title: "L. Diaz", color: "#33B899" },
-    {img: img2, title: "C. Jones", color: "#19D153" },
-    {img: img3, title: "A. Slot", color: "#2CB851" },
+    {img: img1, title: "Rio Ngumoha", color: "#19D153" },
+    {img: img2, title: "New kits 2025 season - Wirtz/Gravenberch", color: "#687168" },
+    {img: img3, title: "Diogo Jota obituary", color: "transparent" },
     {img: img4, title: "M. Salah", color: "#B5457D" },
-    {img: img5, title: "K. Tsimikas", color: "#687168" },
-    {img: img6, title: "Squad", color: "#B23EC2" }
+    {img: img5, title: "New kits 2025 - Van Djik, Gravenberch and more", color: "#B23EC2"},
+    {img: img6, title: "Squad Champions", color: "#ffffffff"}
 ];
 
 export { teamImages };
