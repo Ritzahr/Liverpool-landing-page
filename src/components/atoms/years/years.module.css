@@ -21,19 +21,19 @@
   cursor: pointer;
 }
 
-.active_2024 {
-  color: rgb(103, 244, 140);
-}
-
-.active_2024 > p {
-  font-size: 4rem;
-}
-
 .active_2025 {
-  color: rgb(103, 244, 140);
+  color: #F44336;
 }
 
 .active_2025 > p {
+  font-size: 4rem;
+}
+
+.active_2026 {
+  color: #F44336;
+}
+
+.active_2026 > p {
   font-size: 4rem;
 }
 
@@ -77,19 +77,19 @@
     cursor: pointer;
   }
 
-  .active_2024 {
-    color: rgb(103, 244, 140);
-  }
-
-  .active_2024 > p {
-    font-size: 15rem;
-  }
-
   .active_2025 {
-    color: rgb(103, 244, 140);
+    color: #F44336;
   }
 
   .active_2025 > p {
+    font-size: 15rem;
+  }
+
+  .active_2026 {
+    color: #F44336;
+  }
+
+  .active_2026 > p {
     font-size: 15rem;
   }
 

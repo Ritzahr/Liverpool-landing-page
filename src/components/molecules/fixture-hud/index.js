@@ -1,7 +1,6 @@
 import { FixtureCard } from "@/components/atoms/fixture-card";
 import styles from "./fixture-hud.module.css";
 import { gameSchedule } from "@/assets/prem-fixtures/game-schedule";
-import { useEffect } from "react";
 
 const FixtureHud = ({
   month,
