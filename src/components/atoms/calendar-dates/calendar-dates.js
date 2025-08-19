@@ -13,7 +13,7 @@ const CalendarDates = ({ range, months, showGames }) => {
   return (
     <div className={styles.container}>
       <div className={styles.slideTray}>
-        {range ? range === "2024" ? months.slice(0, 5).map((month) => {
+        {range ? range === "2025" ? months.slice(0, 5).map((month) => {
           return (
             <div 
               className={styles.months}

@@ -63,6 +63,3 @@ const GameFixturesSection = () => {
 };
 
 export { GameFixturesSection };
-
-//When I click the year, I want to change the font style, size and also add some extra effects. 
-//I also want to change the font stylings of the other button.
