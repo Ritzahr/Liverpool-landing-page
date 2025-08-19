@@ -40,7 +40,7 @@ const PlayerCarousel = () => {
       return () => clearTimeout(timer);
     }
   }, [fade]);
-  console.log(cardClicked)
+
   return (
     <main className={styles.section}>
       <div className={styles.hologramSection}>
@@ -60,7 +60,7 @@ const PlayerCarousel = () => {
           )}
       </div>
         <div 
-         className={styles.cardRow}
+         className={styles.container}
          ref={playerRef}
         >
           {players.map((player) => {

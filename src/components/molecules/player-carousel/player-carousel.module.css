@@ -1,21 +1,20 @@
 .section {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .hologramSection {
-  margin-bottom: 20px;
-  z-index: -1;
-  opacity: 100;
+  position: absolute;
   height: 50%;
-  width: 100%;
   background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6));
 }
 
 .hologramSection > image {
   height: 200%;
-  z-index: -1;
-
 }
 
 .fadeIn {
@@ -27,30 +26,30 @@
 }
 
 .bio {
+  overflow-x: scroll;
+  height: 35%;
+  width: 60%;
+  scrollbar-width: none;
   position: absolute;
   top: 15%;
-  left: 35%; 
+  left: 5%;
 }
 
 .bio > p {
   color: white;
   font-size: x-large;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 60%;
-  height: 20%;
+  width: auto;
 }
 
-.cardRow {
-  width: 78vw;
-  justify-self: center;
+.container {
+  width: 90vw;
+  height: 70vh;
   display: flex;
-  height: 47%;
-  overflow: scroll;
   overflow-x: scroll;
   scrollbar-width: none;
-  align-items: center;
   scroll-snap-type: x mandatory;
-  z-index: 2;
+  gap: 4rem;
 }
 
 @keyframes fade-in { 
@@ -74,4 +73,62 @@
   height: 4rem;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hologramSection {
+    position: relative;
+  }
+
+  .hologramSection > image {
+    height: 200%;
+  }
+
+  .fadeIn {
+    animation: fade-in 1s forwards;
+  }
+
+  .bioFade {
+    animation: fade-in 2s forwards;
+  }
+
+  .bio {
+    height: 35%;
+    width: 35%;
+    top: 15%;
+    left: 35%; 
+  }
+
+  .bio > p {
+    color: white;
+    font-size: x-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: auto;
+  }
+
+  .container {
+    height: auto;
+    justify-self: center;
+    display: flex;
+    height: 47%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    z-index: 2;
+  }
+
+  .bottom {
+    background-color: #9d2323;
+    z-index: 0;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+  }
 }

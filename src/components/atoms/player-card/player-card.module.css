@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 210px;
   height: 100%;  
 
   background: #8a0d0d;
@@ -16,12 +15,11 @@
 
 .card {
   display: flex;
+  height: 100%;
   flex-direction: column;
   background: #4e0c0c;
   border-radius: 5% 5% 5% 5%;
   border-radius: 5%;
-  width: 25%;
-  height: 85%;
   align-items: center;
   justify-content: space-evenly;
   margin: 0 2% 0;
@@ -54,8 +52,8 @@
     flex-direction: column;
     padding: 0 5%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 100%;
-    height: 45%;
+    width: 90vw;
+    height: 50vh;
     gap: 10px;
     position: relative;
     box-sizing: border-box;
@@ -85,4 +83,20 @@
     height: 60%;
     width: 100%;
     padding: 10px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .contents {
+    width: 210px;
+  }
+
+  .card {
+    width: 25%;
+    height: 85%;
+  }
+
+  .infosection {
+    width: 100%;
+    height: 45%;
+}
 }
