@@ -2,19 +2,19 @@
   width: 100%;
   height: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .hologramSection {
   position: absolute;
-  height: 50%;
-  background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6));
+  height: 30%;
+  /* background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6)); */
 }
 
-.hologramSection > image {
-  height: 200%;
+.image {
+  position: absolute;
 }
 
 .fadeIn {
@@ -26,11 +26,8 @@
 }
 
 .bio {
-  overflow-x: scroll;
   height: 35%;
   width: 60%;
-  scrollbar-width: none;
-  position: absolute;
   top: 15%;
   left: 5%;
 }
@@ -40,6 +37,10 @@
   font-size: x-large;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: auto;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+  height: 100%;
 }
 
 .container {
@@ -48,23 +49,7 @@
   display: flex;
   overflow-x: scroll;
   scrollbar-width: none;
-  scroll-snap-type: x mandatory;
   gap: 4rem;
-}
-
-@keyframes fade-in { 
-  0% {
-      opacity: 0%;
-      left: 0%;
-  }
-
-  50% {
-    left: 35%;
-  }
-  
-  100% {
-    opacity: 100%;
-  }
 }
 
 .bottom {
@@ -75,19 +60,27 @@
   justify-content: center;
 }
 
+@keyframes fade-in { 
+  0% {
+    opacity: 0%;
+  }
+  
+  100% {
+    opacity: 100%;
+  }
+}
+
+
 @media screen and (min-width: 1024px) {
   .section {
-    width: 100%;
-    height: 100%;
-    display: block;
+    justify-content: flex-end;
   }
-
+  
   .hologramSection {
     position: relative;
-  }
-
-  .hologramSection > image {
-    height: 200%;
+    display: flex; 
+    justify-content: center;
+    padding-left: 19rem;
   }
 
   .fadeIn {
@@ -99,30 +92,29 @@
   }
 
   .bio {
-    height: 35%;
-    width: 35%;
-    top: 15%;
-    left: 35%; 
+    height: 100%;
+    width: 45%;
   }
-
-  .bio > p {
-    color: white;
-    font-size: x-large;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: auto;
-  }
-
+  
   .container {
     height: auto;
-    justify-self: center;
     display: flex;
     height: 47%;
-    overflow-x: scroll;
-    scrollbar-width: none;
     align-items: center;
-    scroll-snap-type: x mandatory;
+    align-self: center;
     z-index: 2;
+    gap: 1rem;
   }
+  
+  /* .bio::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15.5rem;
+    height: 11%;
+    background: linear-gradient(to top, #5c130f, rgb(255 255 255 / 0%) 55%);
+  }; */
 
   .bottom {
     background-color: #9d2323;
