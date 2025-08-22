@@ -40,10 +40,9 @@ const PlayerCarousel = () => {
       return () => clearTimeout(timer);
     }
   }, [fade]);
-  console.log(cardClicked)
+
   return (
     <main className={styles.section}>
-      <div className={styles.hologramSection}>
         {cardClicked && (
           <>
             <Image
@@ -53,14 +52,15 @@ const PlayerCarousel = () => {
               width={650}
               height={960}
             />
-            <div className={`${styles.bio} ${fade ? styles.bioFade : ""}`}>
-              <p>{cardClicked.bio}</p>
+            <div className={styles.hologramSection}>
+              <div className={`${styles.bio} ${fade ? styles.bioFade : ""}`}>
+                  <p>{cardClicked.bio}</p>
+              </div>
             </div>
           </>
           )}
-      </div>
         <div 
-         className={styles.cardRow}
+         className={styles.container}
          ref={playerRef}
         >
           {players.map((player) => {

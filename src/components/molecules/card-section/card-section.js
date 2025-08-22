@@ -3,7 +3,7 @@ import styles from "./card-section.module.css";
 
 const Cardsection = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.container}>
     <div className={styles.gradientTop}>
       <PlayerCarousel />
     </div>

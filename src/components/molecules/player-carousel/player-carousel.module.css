@@ -1,21 +1,20 @@
 .section {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .hologramSection {
-  margin-bottom: 20px;
-  z-index: -1;
-  opacity: 100;
-  height: 50%;
-  width: 100%;
-  background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6));
+  position: absolute;
+  height: 30%;
+  /* background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6)); */
 }
 
-.hologramSection > image {
-  height: 200%;
-  z-index: -1;
-
+.image {
+  position: absolute;
 }
 
 .fadeIn {
@@ -27,45 +26,30 @@
 }
 
 .bio {
-  position: absolute;
+  height: 35%;
+  width: 60%;
   top: 15%;
-  left: 35%; 
+  left: 5%;
 }
 
 .bio > p {
   color: white;
   font-size: x-large;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 60%;
-  height: 20%;
+  width: auto;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+  height: 100%;
 }
 
-.cardRow {
-  width: 78vw;
-  justify-self: center;
+.container {
+  width: 90vw;
+  height: 70vh;
   display: flex;
-  height: 47%;
-  overflow: scroll;
   overflow-x: scroll;
   scrollbar-width: none;
-  align-items: center;
-  scroll-snap-type: x mandatory;
-  z-index: 2;
-}
-
-@keyframes fade-in { 
-  0% {
-      opacity: 0%;
-      left: 0%;
-  }
-
-  50% {
-    left: 35%;
-  }
-  
-  100% {
-    opacity: 100%;
-  }
+  gap: 4rem;
 }
 
 .bottom {
@@ -74,4 +58,69 @@
   height: 4rem;
   display: flex;
   justify-content: center;
+}
+
+@keyframes fade-in { 
+  0% {
+    opacity: 0%;
+  }
+  
+  100% {
+    opacity: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .section {
+    justify-content: flex-end;
+  }
+  
+  .hologramSection {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    padding-left: 19rem;
+  }
+
+  .fadeIn {
+    animation: fade-in 1s forwards;
+  }
+
+  .bioFade {
+    animation: fade-in 2s forwards;
+  }
+
+  .bio {
+    height: 100%;
+    width: 45%;
+  }
+  
+  .container {
+    height: auto;
+    display: flex;
+    height: 47%;
+    align-items: center;
+    align-self: center;
+    z-index: 2;
+    gap: 1rem;
+  }
+  
+  /* .bio::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15.5rem;
+    height: 11%;
+    background: linear-gradient(to top, #5c130f, rgb(255 255 255 / 0%) 55%);
+  }; */
+
+  .bottom {
+    background-color: #9d2323;
+    z-index: 0;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+  }
 }
