@@ -40,25 +40,26 @@ const PlayerCarousel = () => {
       return () => clearTimeout(timer);
     }
   }, [fade]);
-
+  console.log(cardClicked)
   return (
     <main className={styles.section}>
+      <div className={styles.hologramSection}>
         {cardClicked && (
-          <>
+        <>
+          <div className={styles.imgWrapper}>
             <Image
               className={`${styles.image} ${fade ? styles.fadeIn : ""}`} 
               src={`${cardClicked.bodyImage.src}`} 
               alt={`Image of ${cardClicked.bodyImage.src}`}
-              width={650}
-              height={960}
+              fill
             />
-            <div className={styles.hologramSection}>
+          </div>
               <div className={`${styles.bio} ${fade ? styles.bioFade : ""}`}>
                   <p>{cardClicked.bio}</p>
-              </div>
             </div>
           </>
           )}
+          </div>
         <div 
          className={styles.container}
          ref={playerRef}

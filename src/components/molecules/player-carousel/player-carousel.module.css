@@ -4,17 +4,34 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 }
 
 .hologramSection {
+  z-index: 1;
+  opacity: 100;
+  height: 50%;
+  width: 100%;
+  /* background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6)); */
   position: absolute;
   height: 30%;
-  /* background: linear-gradient(to top, rgba(228, 222, 222, 0), rgb(185, 27, 6)); */
 }
 
-.image {
-  position: absolute;
+.imgWrapper {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  gap: 2.5rem;
+  scroll-snap-type: x mandatory;
+  padding-left: 4rem;
+}
+
+.container > * {
+  scroll-snap-align: center;
 }
 
 .fadeIn {
@@ -40,20 +57,11 @@
   overflow-x: scroll;
   scrollbar-width: thin;
   scroll-snap-type: x mandatory;
-  height: 100%;
+  height: 50%;
 }
 
-.container {
-  width: 90vw;
-  height: 70vh;
-  display: flex;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  gap: 4rem;
-}
 
 .bottom {
-  background-color: #9d2323;
   z-index: 0;
   height: 4rem;
   display: flex;
@@ -70,17 +78,30 @@
   }
 }
 
-
 @media screen and (min-width: 1024px) {
-  .section {
-    justify-content: flex-end;
+  .imgWrapper {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .image {
+    position: absolute;
+    display: flex;
   }
   
+  .container {
+    height: 45%;
+    align-items: center;
+    z-index: 2;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+
   .hologramSection {
-    position: relative;
-    display: flex; 
-    justify-content: center;
-    padding-left: 19rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .fadeIn {
@@ -92,19 +113,10 @@
   }
 
   .bio {
-    height: 100%;
+    height: 50%;
     width: 45%;
   }
   
-  .container {
-    height: auto;
-    display: flex;
-    height: 47%;
-    align-items: center;
-    align-self: center;
-    z-index: 2;
-    gap: 1rem;
-  }
   
   /* .bio::after {
     content: "";
@@ -117,8 +129,7 @@
   }; */
 
   .bottom {
-    background-color: #9d2323;
-    z-index: 0;
+    z-index: 1;
     height: 4rem;
     display: flex;
     justify-content: center;
