@@ -13,13 +13,12 @@ const PlayerCard = ({ name, position, img, handleClick }) => {
             src={img}
             alt={`image of ${name}`}
             className={styles.img}
+            fill
           />
         </div>
         <div className={styles.meta}>
-          <div className={styles.info}>
             <h1>{` ${name}`}</h1>
             <p>{` ${position}`}</p>
-          </div>
         </div>
       </div>
     </main>

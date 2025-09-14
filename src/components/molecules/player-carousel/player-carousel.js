@@ -40,7 +40,7 @@ const PlayerCarousel = () => {
       return () => clearTimeout(timer);
     }
   }, [fade]);
-  console.log(cardClicked)
+  
   return (
     <main className={styles.section}>
       <div className={styles.hologramSection}>
