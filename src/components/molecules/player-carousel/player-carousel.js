@@ -40,12 +40,13 @@ const PlayerCarousel = () => {
       return () => clearTimeout(timer);
     }
   }, [fade]);
-  
+
   return (
     <main className={styles.section}>
-      <div className={styles.hologramSection}>
+      <div className={`${styles.hologramSection} ${cardClicked ? styles.active : ""}`}>
         {cardClicked && (
-        <>
+        <div className={styles.wrapper}>
+          <div className={styles.cross} onClick={() => setCardClicked(null)}>X</div>
           <div className={styles.imgWrapper}>
             <Image
               className={`${styles.image} ${fade ? styles.fadeIn : ""}`} 
@@ -57,11 +58,11 @@ const PlayerCarousel = () => {
               <div className={`${styles.bio} ${fade ? styles.bioFade : ""}`}>
                   <p>{cardClicked.bio}</p>
             </div>
-          </>
+          </div>
           )}
           </div>
         <div 
-         className={styles.container}
+         className={`${styles.container} ${cardClicked ? styles.hide : ''}`}
          ref={playerRef}
         >
           {players.map((player) => {
@@ -76,7 +77,7 @@ const PlayerCarousel = () => {
               );
             })};
         </div>
-        <div className={styles.bottom}>
+        <div className={`${styles.bottom} ${cardClicked ? styles.hide : ''}`}>
          <Arrow 
             arrowClick={arrowClick}
             cardClicked={cardClicked}
