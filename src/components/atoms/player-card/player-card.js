@@ -1,25 +1,28 @@
 import Image from "next/image";
-import styles from './player-card.module.css';
+import styles from "./player-card.module.css";
 
 const PlayerCard = ({ name, position, img, handleClick }) => {
-    return (
-      <main 
+  return (
+    <main
       className={styles.card}
       onClick={() => handleClick(name)}
-      >
-          <div className={styles.contents}>
-            <Image 
-              src={img}
-              alt=""
-              className={styles.img}
-              />
-                <div className={styles.infosection}>  
-                    <h1>{` ${name}`}</h1>
-                    <p>{` ${position}`}</p>
-                </div>
-          </div>
-        </main>
-    );
+    >
+      <div className={styles.contents}>
+        <div className={styles.imgWrapper}>
+          <Image
+            src={img}
+            alt={`image of ${name}`}
+            className={styles.img}
+            fill
+          />
+        </div>
+        <div className={styles.meta}>
+            <h1>{` ${name}`}</h1>
+            <p>{` ${position}`}</p>
+        </div>
+      </div>
+    </main>
+  );
 };
 
 export { PlayerCard };
