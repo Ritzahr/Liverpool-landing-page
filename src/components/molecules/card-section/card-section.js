@@ -1,4 +1,4 @@
-import { PlayerCarousel } from "../player-carousel/player-carousel";
+import { PlayerCarousel } from "../../organisms/player-carousel/player-carousel";
 import styles from "./card-section.module.css";
 
 const Cardsection = () => {

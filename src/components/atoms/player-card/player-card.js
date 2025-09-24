@@ -1,11 +1,12 @@
 import Image from "next/image";
 import styles from "./player-card.module.css";
 
-const PlayerCard = ({ name, position, img, handleClick }) => {
+const PlayerCard = ({ name, position, img, handleClick, cardRef }) => {
   return (
     <main
       className={styles.card}
       onClick={() => handleClick(name)}
+      ref={cardRef}
     >
       <div className={styles.contents}>
         <div className={styles.imgWrapper}>

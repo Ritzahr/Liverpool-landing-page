@@ -5,17 +5,17 @@ import Image from "next/image";
 const IconTray = () => {
   return (
     <div className={styles.icons}>
-      {icons.map((icon) => {
+      {icons.map((icon, i) => {
         return (
          <Image 
             src={icon} 
             alt={`${icon} Icons`}
             width={40} 
             height={40}
-            key={`img-icon${icon}`}
+            key={`Icon-tray-img-${icon}+${i}`}
           />
         )
-      })}x
+      })}
     </div>
   );
 };

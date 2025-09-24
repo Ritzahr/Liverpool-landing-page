@@ -11,7 +11,7 @@ const SquadRow = ({ img }) => {
         <Image
           className={styles.images}
           src={img[0]} 
-          alt=''
+          alt='image of player squad'
           fill
         />
         </div>
