@@ -29,39 +29,31 @@ const PlayerCarousel = () => {
   }, [cardClicked]);
 
   const arrowClick = (direction) => {
-    const allCards = playerRef.current.children;
     const nextCard = players[currentIndex + 1];
     const prevCard = players[currentIndex - 1];
 
-    if (
-      direction === "right" &&
-      cardClicked ) {
+    if ( direction === "right" && cardClicked ) {
       cardClick(nextCard.name);
-      // allCards[currentIndex+1].scrollIntoView({ behavior: "smooth", block: "end", container: "nearest"})
-      if (players.indexOf(cardClicked) !== players.length - 1 && players.indexOf(cardClicked) > 2) {
+      if (players.indexOf(cardClicked) !== players.length - 1 && players.indexOf(cardClicked) > 1) {
         playerRef.current.scrollBy({
-          left: cardRef.current.offsetWidth * 1.1,
+          left: cardRef.current.offsetWidth * 1.5,
           behaviour: "smooth"
         });
-      }
-      if (
-        direction === "left" &&
-        cardClicked &&
-        players.indexOf(cardClicked) !== 0
-      ) {
+      };
+    }
+    if ( direction === "left" && cardClicked) 
+      if (players.indexOf(cardClicked) !== 0 ) {
         cardClick(prevCard.name);
         playerRef.current.scrollBy({
-          right: cardRef.current.offsetWidth * 1.1,
+          left: -cardRef.current.offsetWidth * 1.1,
           behaviour: "smooth"
         });
-        // allCards[currentIndex - 1].scrollIntoView({behavior: "smooth", block: "start"});
       }
-    }
-  };
+    };
 
   useEffect(() => {
     if (fade === "fadeIn") {
-      const timer = setTimeout(() => setFade(null), 1000);
+      const timer = setTimeout(() => setFade(null), 400);
       return () => clearTimeout(timer);
     }
   }, [fade]);
