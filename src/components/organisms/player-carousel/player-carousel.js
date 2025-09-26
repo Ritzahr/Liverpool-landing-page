@@ -9,10 +9,12 @@ const PlayerCarousel = () => {
   const [fade, setFade] = useState(null);
   const [cardClicked, setCardClicked] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [active, setActive] = useState(null);
   const playerRef = useRef(null);
   const cardRef = useRef(null);
 
   const cardClick = (name) => {
+    setActive(name);
     setCardClicked(players.find((player) => player.name === name));
     setFade("fadeIn");
   };
@@ -22,10 +24,8 @@ const PlayerCarousel = () => {
     if (e.key === "ArrowLeft") arrowClick("left");
   }
 
-
   useEffect(() => {
     setCurrentIndex(players.indexOf(cardClicked));
-    console.log(cardRef)
   }, [cardClicked]);
 
   const arrowClick = (direction) => {
@@ -51,6 +51,7 @@ const PlayerCarousel = () => {
       }
     };
 
+    console.log(cardClicked)
   useEffect(() => {
     if (fade === "fadeIn") {
       const timer = setTimeout(() => setFade(null), 400);
@@ -84,7 +85,9 @@ const PlayerCarousel = () => {
               position={`${player.position}`}
               img={player.image}
               handleClick={cardClick}
-              />
+              isActive={active === player.name}
+              onClick={() => setActive(player.name)}
+            />
             </div>
           );
         })}

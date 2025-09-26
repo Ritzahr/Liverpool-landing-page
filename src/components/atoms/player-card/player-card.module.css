@@ -77,4 +77,8 @@
     width: auto;
     height: fit-content;
   }
+
+  .selected {
+    background: rgb(87 226 92);
+  }
 }

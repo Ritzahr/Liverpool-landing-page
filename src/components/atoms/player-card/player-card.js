@@ -1,12 +1,13 @@
 import Image from "next/image";
 import styles from "./player-card.module.css";
+import { useEffect, useState } from "react";
 
-const PlayerCard = ({ name, position, img, handleClick, cardRef }) => {
+const PlayerCard = ({ name, position, img, handleClick, isActive, onClick}) => {
+  
   return (
     <main
-      className={styles.card}
-      onClick={() => handleClick(name)}
-      ref={cardRef}
+      className={`${styles.card} ${isActive ? styles.selected : ''}`}
+      onClick={() => {onClick(), handleClick(name)}}
     >
       <div className={styles.contents}>
         <div className={styles.imgWrapper}>
