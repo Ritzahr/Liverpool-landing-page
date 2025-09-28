@@ -15,7 +15,7 @@
 
 .section {
   position: relative;
-  background: gray;
+  background: linear-gradient(#7f8fd0, #a6f8a6, #734744, #080707);
   height: 60%;
   width: 75%;
   border-radius: 30px;
