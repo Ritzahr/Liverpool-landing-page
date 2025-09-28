@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ChevronDown } from "../chevron-down/chevron-down";
 import styles from "./arrows.module.css";
 

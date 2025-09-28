@@ -1,0 +1,28 @@
+.container {
+  color: white;
+  font-size: 35px;
+  padding-left: 1rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-left: 1rem;
+  font-family: monospace;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: none;
+  }
+}

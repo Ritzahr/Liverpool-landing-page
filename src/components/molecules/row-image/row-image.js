@@ -27,7 +27,7 @@ const RowImage = ({ img, text }) => {
                 <div>
                   <Image
                     src={img.src} 
-                    alt={img.title}
+                    alt={`image of ${img.title}`}
                     fill
                     className={styles.images}
                   />
