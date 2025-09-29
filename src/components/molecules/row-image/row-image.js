@@ -24,7 +24,7 @@ const RowImage = ({ img, text }) => {
                   key={img.src}
                   className={styles.swiperSlide}
                 >
-                <div>
+                <div className={styles.wrapper}>
                   <Image
                     src={img.src} 
                     alt={`image of ${img.title}`}

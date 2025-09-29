@@ -51,7 +51,6 @@ const PlayerCarousel = () => {
       }
     };
 
-    console.log(cardClicked)
   useEffect(() => {
     if (fade === "fadeIn") {
       const timer = setTimeout(() => setFade(null), 400);

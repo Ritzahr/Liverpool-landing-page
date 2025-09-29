@@ -54,11 +54,11 @@
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
 }
 
 .reveal {
-  display: none;
+  opacity: 0;
 }
 
 @media (min-width: 1024px) {
@@ -73,14 +73,13 @@
     font-size: 10vw;
   }
 
-  .hidden {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
   .reveal {
     opacity: 1;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .hidden {
+    transition: opacity 0.4s ease-in-out;
   }
 }
 
