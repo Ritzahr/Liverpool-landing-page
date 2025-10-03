@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  /* margin: 3.2rem 0 0; */
   background-color: black;
   color: white;
   align-items: center;
@@ -20,6 +19,13 @@
   font-weight: 600;
   font-size: 18px;
   width: 100%;
+
+  --footer-link-padding: 0;
+  --footer-link-color: white;
+  --footer-link-font-size: 18px;
+  --footer-link-font-weight: 600;
+  --footer-link-background-color: none;
+  --footer-link-margin: 0 0 1rem 2rem;
 }
 
 .links > li {
