@@ -5,7 +5,6 @@ const FixtureCard = ({games, setIsHovering, setHoveredTeam, setClickedMonth}) =>
     const team = target.children[1].innerHTML;
     setHoveredTeam(team)
     setIsHovering(true)
-    console.log(target);
   };
 
   const onMouseLeave = () => setIsHovering(false);

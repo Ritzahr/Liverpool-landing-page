@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import styles from './util-links.module.css';
-
+import styles from "./util-links.module.css";
+import { LinkBTN } from "../link-button";
 
 const UtilLinks = ({ links }) => {
   return (
@@ -8,12 +7,9 @@ const UtilLinks = ({ links }) => {
       <ul>
         {links.map((tag) => {
           return (
-          <li 
-            className={styles.link}
-            key={`Link-${tag}`}
-            >
-            <Link href="/footer-utils-not-found">{tag}</Link>
-          </li>
+            <li className={styles.link} key={`Link-${tag}`}>
+              <LinkBTN link="/footer-utils-not-found" text={tag} />
+            </li>
           );
         })}
       </ul>

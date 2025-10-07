@@ -18,7 +18,7 @@
   list-style: none;
   font-weight: 600;
   font-size: 18px;
-  width: 100%;
+  /* width: 100%; */
 
   --footer-link-padding: 0;
   --footer-link-color: white;

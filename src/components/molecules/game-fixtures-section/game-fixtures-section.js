@@ -31,7 +31,6 @@ const GameFixturesSection = () => {
   useEffect(() => {
     setClickedMonth(null)
   }, [clickedYear])
-  console.log(hoveredTeam)
   return (
     <div className={styles.main}>
       <div className={`${styles.hidden} ${isHovering ? styles.reveal : ''}`}>

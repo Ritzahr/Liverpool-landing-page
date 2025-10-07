@@ -11,14 +11,21 @@
   height: 100%;
   justify-content: end;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 }
 
 .text-0 {
   color: rgb(0, 255, 255);;
 }
 
-@media (min-width: 1025px) {
+@media screen and (min-width: 768px) {
+  .container { 
+    align-items: start;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
   .text {
     font-size: 12rem;
   }
@@ -27,6 +34,8 @@
     align-items: flex-end;
     z-index: 1;
     position: absolute;
+    padding-left: 0;
+    padding-right: 2rem;
   }
 }
 

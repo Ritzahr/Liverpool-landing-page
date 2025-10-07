@@ -13,6 +13,7 @@
   font-weight: var(--footer-link-font-weight, 700);
   text-decoration: none;
   border: none;
+  width: var(--footer-link-button-width);
 }
 
 .link > button > a {

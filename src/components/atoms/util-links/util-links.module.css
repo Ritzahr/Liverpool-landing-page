@@ -1,19 +1,31 @@
 .utilities {
   border-top: solid thick rgb(62, 62, 62);
-  width: 80%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
 }
 
 .utilities > ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  box-sizing: border-box;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
   list-style: none;
   width: 100%;
   height: 70%;
+  gap: 1rem;
+
+  --footer-link-padding: 0;
+  --footer-link-color: white;
+  --footer-link-font-size: 14px;
+  --footer-link-font-weight: 600;
+  --footer-link-background-color: none;
+  --footer-link-button-width: 100%;
+  --footer-link-margin: 0;
+}
+
+.link {
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .link > a {
@@ -24,4 +36,16 @@
 
 .link > a:hover {
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .utilities > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    height: 70%;
+    gap: 1rem;
+  } 
 }
