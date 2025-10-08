@@ -1,6 +1,7 @@
 .link {
   z-index: 3;
   margin: var(--footer-link-margin);
+  text-align: center;
 }
 
 .link > button {

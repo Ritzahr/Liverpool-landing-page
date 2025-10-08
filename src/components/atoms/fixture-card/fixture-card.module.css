@@ -14,6 +14,7 @@
   color: rgb(255, 250, 251);
   font-size: 22px;
   align-items: center;
+  text-align: center;
 }
 
 .game > p:first-child {
