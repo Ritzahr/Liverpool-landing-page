@@ -11,7 +11,7 @@
   top: 20%;
   gap: 10%;
 }
-
+/* Change the positon and layout of the years, make them stack on top of each other in mobile and also delete some useless CSS rules.*/
 .years {
   font-size: 4rem;
   animation: boble 2s infinite ease-in-out alternate;

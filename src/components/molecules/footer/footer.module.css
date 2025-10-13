@@ -1,25 +1,31 @@
 .container {
   display: flex;
   flex-direction: column;
-  /* margin: 3.2rem 0 0; */
   background-color: black;
   color: white;
   align-items: center;
   justify-content: space-evenly;
   white-space: nowrap;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
   gap: 1rem;
   font-family: "Open Sans", sans-serif;
 }
 
 .links {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   columns: 2;
-  padding: 0;
   list-style: none;
   font-weight: 600;
   font-size: 18px;
-  width: 100%;
+
+  --footer-link-padding: 0;
+  --footer-link-color: white;
+  --footer-link-font-size: 18px;
+  --footer-link-font-weight: 600;
+  --footer-link-background-color: none;
+  /* --footer-link-margin: 0 0 1rem 2rem; */
 }
 
 .links > li {
@@ -49,6 +55,7 @@
     display: flex;
     width: auto;
     flex-direction: row;
+    padding: 0;
     columns: 1;
   }
   .links > li {

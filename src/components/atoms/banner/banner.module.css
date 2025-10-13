@@ -1,34 +1,41 @@
 .text {
-  position: absolute;
-  height: 60px;
-  align-content: center;
-  width: 70vw;
   text-align: center;
   color: white;
-  left: 0%;
-  bottom: 5%;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 5rem;
   }
 
-.text-0 {
-  color: rgb(0, 255, 255);
-  line-height: 16%;
-  left: -9%;
-  bottom: 20%;
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: end;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (min-width: 1024px) {
+.text-0 {
+  color: rgb(0, 255, 255);;
+}
+
+@media screen and (min-width: 768px) {
+  .container { 
+    align-items: start;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
   .text {
-    font-size: 16rem;
-    left: -9%;
-    bottom: 20%;
+    font-size: 12rem;
   }
 
-  .text-0 {
-    left: -15%;
-    bottom: 29%;
+  .container {
+    align-items: flex-end;
+    z-index: 1;
+    position: absolute;
+    padding-left: 0;
+    padding-right: 2rem;
   }
 }
 
