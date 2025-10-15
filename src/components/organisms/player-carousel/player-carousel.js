@@ -2,7 +2,7 @@ import { PlayerCard } from "@/components/atoms/player-card/player-card";
 import { players } from "@/assets/players-2024/roster";
 import { useEffect, useRef, useState } from "react";
 import styles from "./player-carousel.module.css";
-import { Arrow } from "@/components/atoms/arrows/arrows";
+import { Arrows } from "@/components/atoms/arrows";
 import { Hologram } from "@/components/molecules/hologram";
 
 const PlayerCarousel = () => {
@@ -93,7 +93,7 @@ const PlayerCarousel = () => {
         ;
       </div>
       <div className={`${styles.bottom} ${cardClicked ? styles.hide : ""}`}>
-        <Arrow arrowClick={arrowClick} cardClicked={cardClicked} />
+        <Arrows arrowClick={arrowClick} cardClicked={cardClicked} />
       </div>
     </main>
   );

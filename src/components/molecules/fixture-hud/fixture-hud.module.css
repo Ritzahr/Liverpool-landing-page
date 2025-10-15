@@ -1,6 +1,7 @@
 .false {
+  display: none;
   opacity: 0;
-  transition: opacity 1s;
+  transition: display 5s;
 }
 
 .true {
@@ -16,7 +17,7 @@
   flex-direction: column-reverse;
   z-index: 1;
   opacity: 0.9;
-  transition: opacity 2s;
+  transition: display 2s;
 }
 
 .active {

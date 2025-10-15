@@ -1,5 +1,5 @@
 import styles from './game-fixtures-section.module.css';
-import { CalendarDates } from '@/components/atoms/calendar-dates/calendar-dates';
+import { CalendarDates } from '@/components/atoms/calendar-dates';
 import { useState, useEffect } from 'react';
 import { Years } from '@/components/atoms/years';
 import { months } from '@/app/config/months';

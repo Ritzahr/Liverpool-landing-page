@@ -1,11 +1,9 @@
-import { useEffect } from "react";
 import { ChevronDown } from "../chevron-down/chevron-down";
 import styles from "./arrows.module.css";
 
-const Arrow = ({arrowClick}) => {
+const Arrows = ({arrowClick}) => {
   return (
-    <div className={styles.arrows}>
-      <div className={styles.arrowsContent}>
+    <div className={styles.section}>
         <div
           className={styles.left}
           onClick={() => arrowClick('left')}
@@ -20,9 +18,8 @@ const Arrow = ({arrowClick}) => {
           <ChevronDown 
           />
         </div>
-      </div>
     </div>
   );
 };
 
-export { Arrow };
+export { Arrows };

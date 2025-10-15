@@ -1,3 +1,5 @@
+import { Arrows } from "../arrows";
+import { ChevronDown } from "../chevron-down/chevron-down";
 import styles from "./calendar-dates.module.css";
 import { useState } from "react";
 
@@ -43,9 +45,11 @@ const CalendarDates = ({ range, months, showGames }) => {
                   </div>
                 )
               }) : null}
-        </div>
+      </div>
+    <ChevronDown height={50} width={50} fill="white"/>
+    <ChevronDown height={50} width={50} fill="white"/>
     </div>
   );
 };
-
+// Looking to have two arrows that are on each side of the CalendarDates container. Make sure they are as big as the container itself.
 export { CalendarDates };
