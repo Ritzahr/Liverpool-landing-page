@@ -2,8 +2,12 @@
     order: var(--right-calendar-arrow-order, 0);
     align-content: center;
   }
+
+  .wrapper {
+    height: auto;
+  }
   
-  .container > * {
+  .wrapper > * {
     order: 3;
     flex: 0 0 auto;
     transform: rotate(270deg);
@@ -13,7 +17,7 @@
     animation: altFade 1s ease-out;
   }
 
-  .container > *:hover {
+  .wrapper > *:hover {
     opacity: 1;
     transition: opacity 0.5s ease;
   }
