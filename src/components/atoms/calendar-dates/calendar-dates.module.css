@@ -3,61 +3,15 @@
   z-index: 1;
 }
 
-.slideTray {
-  overflow-x: scroll;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  color: white;
-  gap: 4rem;
-  padding: 0 0 0 4rem;
-}
-
-.slideTray > * {
-  scroll-snap-align: center;
-}
-
-.slideTray > *:hover {
-  cursor: pointer;
-}
-
-.months {
-  font-size: 12rem;
-  font-family: Helvetica;
-  animation: fade-in 0.4s ease-in-out;
-}
-
-.months:last-child {
-  padding: 0px 4rem 0 0rem;
-}
-
-.opacity100 {
-  opacity: 1;
-  transition: opacity 0.4s;
-  color:#F44336;
-}
-
-.opacity50 {
-  opacity: 0.5;
-}
-
-.container_active {
-  display: flex;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-
 @media (min-width: 1024px) {
   .container {
     scrollbar-width: none;
     justify-content: flex-start;
-    width: 30rem;
+    width: 45rem;
+    position: relative;
+    display: flex;
+
+    --left-calendar-arrow-order: 0;
+    --right-calendar-arrow-order: 3;
   }
 }

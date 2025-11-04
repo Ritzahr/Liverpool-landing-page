@@ -49,6 +49,7 @@ const GameFixturesSection = () => {
         range={range}
         months={months}
         showGames={showGames}
+        clickedYear={clickedYear}
       />
       <FixtureHud
         month={clickedMonth}
