@@ -42,7 +42,7 @@ const PlayerCarousel = () => {
       };
     }
     if ( direction === "left" && cardClicked) 
-      if (players.indexOf(cardClicked) !== 0 ) {
+      if (players.indexOf(cardClicked) !== 0) {
         cardClick(prevCard.name);
         playerRef.current.scrollBy({
           left: -cardRef.current.offsetWidth * 1.1,

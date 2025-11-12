@@ -16,14 +16,15 @@
   cursor: pointer;
 }
 
+#DEC {
+  padding-right: 1rem;
+  color: red;
+}
+
 .section {
   font-size: 12rem;
   font-family: Helvetica;
   animation: fade-in 0.5s ease-in-out;
-}
-
-.section:last-child {
-  padding: 0px 4rem 0 0rem;
 }
 
 .opacity100 {
