@@ -25,7 +25,7 @@ const Months = ({
     setActiveDate(target.innerHTML);
   };
   
-  const handleScroll = (entry, inView, i) => {
+  const handleScroll = (entry, inView) => {
     if (inView) {
       if (clickedMonth) {
         showGames(entry)
