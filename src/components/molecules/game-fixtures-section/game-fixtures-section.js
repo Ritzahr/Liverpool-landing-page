@@ -25,7 +25,11 @@ const GameFixturesSection = () => {
   };
 
   const showGames = ({target}) => {
-    setClickedMonth(target.innerHTML)
+    if (clickedMonth) {
+      setClickedMonth(null)
+    } else {
+      setClickedMonth(target.innerText)
+    }
   }
 
   useEffect(() => {
@@ -50,6 +54,8 @@ const GameFixturesSection = () => {
         months={months}
         showGames={showGames}
         clickedYear={clickedYear}
+        clickedMonth={clickedMonth}
+        setClickedMonth={setClickedMonth}
       />
       <FixtureHud
         month={clickedMonth}
