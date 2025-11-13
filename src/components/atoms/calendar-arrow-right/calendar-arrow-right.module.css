@@ -1,0 +1,43 @@
+  .container {
+    display: none;
+    order: var(--right-calendar-arrow-order, 0);
+  }
+
+  .wrapper {
+    height: auto;
+  }
+  
+  .wrapper > * {
+    order: 3;
+    flex: 0 0 auto;
+    transform: rotate(270deg);
+    align-self: center;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+    animation: altFade 1s ease-out;
+  }
+
+  .wrapper > *:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+
+@keyframes altFade {
+  from { 
+    opacity: 0; 
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .container {
+    display: flex;
+  }
+  
+  .wrapper {
+    align-content: center;
+  }
+}

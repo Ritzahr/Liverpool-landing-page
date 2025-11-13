@@ -1,77 +1,17 @@
 .container {
-  overflow-x: scroll;
-  scrollbar-width: none;
   width: 100%;
   z-index: 1;
-  scroll-snap-type: x mandatory;
-}
-
-.slideTray {
-  display: flex;
-  align-items: center;
-  color: white;
-  gap: 4rem;
-}
-
-.slideTray > * {
-  scroll-snap-align: center;
-}
-
-.slideTray > *:hover {
-  cursor: pointer;
-}
-
-.months {
-  font-size: 8rem;
-  font-family: Helvetica;
-  animation: fade-in 0.4s ease-in-out;
-}
-
-.months:first-child {
-  padding: 0 0 0 2rem;
-}
-
-.months:last-child {
-  padding: 0px 4rem 0 0rem;
-}
-
-.opacity100 {
-  opacity: 1;
-  font-size: 10rem;
-  transition: font-size 0.4s;
-  color:#F44336;
-}
-
-.opacity50 {
-  opacity: 0.5;
-}
-
-.container_active {
-  display: flex;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
 }
 
 @media (min-width: 1024px) {
   .container {
-    overflow-x: none;
     scrollbar-width: none;
-    height: 15rem;
-  }
+    justify-content: flex-start;
+    width: 45rem;
+    position: relative;
+    display: flex;
 
-  .slideTray {
-    justify-content: center;
-    height: 100%;
-  }
-
-  .opacity100 {
-    font-size: 12rem;
+    --left-calendar-arrow-order: 0;
+    --right-calendar-arrow-order: 3;
   }
 }

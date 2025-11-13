@@ -1,0 +1,35 @@
+  .container {
+    display: none;
+    order: var(--left-calendar-arrow-order, 0);
+    align-content: center;
+  }
+  
+  .container > * {
+    flex: 0 0 auto;
+    transform: rotate(90deg);
+    align-self: center;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+    animation: altFade 1s ease-out;
+  }
+
+  .container > *:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+
+@keyframes altFade {
+  from { 
+    opacity: 0; 
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .container {
+    display: flex;
+  } 
+}

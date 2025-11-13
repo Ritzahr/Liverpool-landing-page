@@ -1,18 +1,11 @@
-.arrows {
+.section {
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   border-radius: 10%;
-  width: 20%;
-  height: 10%;
+  color: var(--arrows-color);
   align-self: center;
-}
-
-.arrowsContent {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
+  gap: var(--arrows-gap, 1rem);
 }
 
 .left,
