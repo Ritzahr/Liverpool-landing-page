@@ -72,11 +72,15 @@ const Months = ({
             })
           : months.slice(5, -2).map((month) => {
               return (
+                <InView
+                  onChange={(inView, entry) => handleScroll(entry, inView)}
+                  root={containerRef.current}
+                  key={`${month}-div2-container`}
+                >
                 <div
                   className={`${styles.section} ${
                     activeDate ? styles.active : ""
                   }`}
-                  key={`${month}-div2-container`}
                   onClick={dateClick}
                 >
                   <p
@@ -90,6 +94,7 @@ const Months = ({
                     {month}
                   </p>
                 </div>
+                </InView>
               );
             })
         : null}
