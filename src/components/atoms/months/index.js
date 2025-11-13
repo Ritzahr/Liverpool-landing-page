@@ -24,8 +24,8 @@ const Months = ({
     }
     setActiveDate(target.innerHTML);
   };
-
-  const handleScroll = (entry, inView) => {
+  
+  const handleScroll = (entry, inView, i) => {
     if (inView) {
       if (clickedMonth) {
         showGames(entry)
@@ -46,7 +46,7 @@ const Months = ({
           ? months.slice(0, 5).map((month, i) => {
               return (
                 <InView
-                  onChange={(inView, entry) => handleScroll(entry, inView)}
+                  onChange={(inView, entry) => handleScroll(entry, inView, i)}
                   root={containerRef.current}
                   key={`${month}-div1-container`}
                 >
@@ -81,10 +81,11 @@ const Months = ({
                   className={`${styles.section} ${
                     activeDate ? styles.active : ""
                   }`}
-                  onClick={dateClick}
-                >
+                  onClick={showGames}
+                  ref={cardRef}
+                  >
                   <p
-                    onClick={showGames}
+                    onClick={dateClick}
                     className={
                       month.includes(clickedMonth)
                         ? styles.opacity100

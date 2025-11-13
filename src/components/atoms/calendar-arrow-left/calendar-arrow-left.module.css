@@ -1,4 +1,5 @@
   .container {
+    display: none;
     order: var(--left-calendar-arrow-order, 0);
     align-content: center;
   }
@@ -25,4 +26,10 @@
   to {
     opacity: 0.5;
   }
+}
+
+@media screen and (min-width: 1028px) {
+  .container {
+    display: flex;
+  } 
 }

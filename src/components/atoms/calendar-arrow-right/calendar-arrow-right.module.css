@@ -1,6 +1,6 @@
   .container {
+    display: none;
     order: var(--right-calendar-arrow-order, 0);
-    align-content: center;
   }
 
   .wrapper {
@@ -29,5 +29,15 @@
   }
   to {
     opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .container {
+    display: flex;
+  }
+  
+  .wrapper {
+    align-content: center;
   }
 }

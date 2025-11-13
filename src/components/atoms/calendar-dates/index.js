@@ -7,7 +7,6 @@ import styles from "./calendar-dates.module.css";
 const CalendarDates = ({ range, months, showGames, clickedYear, clickedMonth, setClickedMonth }) => {
   const [cardWidth, setCardWidth] = useState(null);
   const [containerRef, setContainerRef] = useState(null);
-  const [selectedMonth, setSelectedMonth] = useState(null);
 
   return (
     <div className={styles.container}>
@@ -17,8 +16,6 @@ const CalendarDates = ({ range, months, showGames, clickedYear, clickedMonth, se
         range={range}
         months={months}
         showGames={showGames}
-        setSelectedMonth={setSelectedMonth}
-        selectedMonth={selectedMonth}
         clickedMonth={clickedMonth}
         setClickedMonth={setClickedMonth}        
       />
@@ -26,11 +23,13 @@ const CalendarDates = ({ range, months, showGames, clickedYear, clickedMonth, se
         containerRef={containerRef}
         cardWidth={cardWidth?.current}
         clickedYear={clickedYear}
+        clickedMonth={clickedMonth}
       />
       <RightCalendarArrow
         containerRef={containerRef}
         cardWidth={cardWidth?.current}
         clickedYear={clickedYear}
+        clickedMonth={clickedMonth}
       />
     </div>
   );

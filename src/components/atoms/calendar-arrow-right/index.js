@@ -3,8 +3,8 @@ import { ChevronDown } from "../chevron-down";
 
 const RightCalendarArrow = ({ containerRef, cardWidth, clickedYear }) => {
   const scrollWidth = cardWidth?.offsetWidth;
+  console.log(scrollWidth)
   const clickHandle = () => {
-    console.log("click")
     containerRef.current.scrollBy({
       left: scrollWidth,
       behavior: "smooth",
@@ -21,7 +21,3 @@ const RightCalendarArrow = ({ containerRef, cardWidth, clickedYear }) => {
 };
 
 export { RightCalendarArrow };
-
-
-// Maybe I could use the intersection observer here to trigger the show games on Months?
-// NEED TO CHECK WHY THE ARROWS ARENT WORKING IN 2026 AND ALSO WHY THEY AREN'T WORKING WHEN NO MONTH HAS BEEN SELECTED.
