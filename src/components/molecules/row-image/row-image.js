@@ -1,4 +1,4 @@
-import { Banner } from "../../atoms/banner/banner";
+import { Banner } from "../../atoms/banner";
 import Image from "next/image";
 import styles from "./row-image.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,7 +33,7 @@ const RowImage = ({ img, text }) => {
                   />
                    <Banner 
                     color={color}
-                    text={text}
+                    title={text}
                   />
                 </div>
                 </SwiperSlide>
