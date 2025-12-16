@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { LeftCalendarArrow } from "../calendar-arrow-left";
-import { RightCalendarArrow } from "../calendar-arrow-right";
 import { Months } from "../months";
 import styles from "./calendar-dates.module.css";
+import { CalendarArrow } from "@/components/molecules/calendar-arrow";
 
 const CalendarDates = ({ range, months, showGames, clickedYear, clickedMonth, setClickedMonth }) => {
   const [cardWidth, setCardWidth] = useState(null);
@@ -19,17 +18,20 @@ const CalendarDates = ({ range, months, showGames, clickedYear, clickedMonth, se
         clickedMonth={clickedMonth}
         setClickedMonth={setClickedMonth}        
       />
-      <LeftCalendarArrow
+      <CalendarArrow
+        clickedMonth={clickedMonth}
+        clickedYear={clickedYear}
         containerRef={containerRef}
         cardWidth={cardWidth?.current}
-        clickedYear={clickedYear}
-        clickedMonth={clickedMonth}
       />
-      <RightCalendarArrow
+      <CalendarArrow
+        clickedMonth={clickedMonth}
+        clickedYear={clickedYear}
         containerRef={containerRef}
         cardWidth={cardWidth?.current}
-        clickedYear={clickedYear}
-        clickedMonth={clickedMonth}
+        direction="right"
+        order={3}
+        rotation={180}
       />
     </div>
   );

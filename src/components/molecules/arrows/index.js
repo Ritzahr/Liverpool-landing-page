@@ -1,4 +1,4 @@
-import { ChevronDown } from "../chevron-down";
+import { ChevronDown } from "../../atoms/chevron-down";
 import styles from "./arrows.module.css";
 
 const Arrows = ({ arrowClick }) => {

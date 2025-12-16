@@ -2,7 +2,7 @@ import { PlayerCard } from "@/components/atoms/player-card/player-card";
 import { players } from "@/assets/players-2024/roster";
 import { useEffect, useRef, useState } from "react";
 import styles from "./player-carousel.module.css";
-import { Arrows } from "@/components/atoms/arrows";
+import { Arrows } from "@/components/molecules/arrows";
 import { Hologram } from "@/components/molecules/hologram";
 
 const PlayerCarousel = () => {
