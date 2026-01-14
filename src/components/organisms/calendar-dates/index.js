@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Months } from "../months";
+import { Months } from "../../atoms/months";
 import styles from "./calendar-dates.module.css";
 import { CalendarArrow } from "@/components/molecules/calendar-arrow";
 
