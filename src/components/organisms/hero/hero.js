@@ -19,7 +19,7 @@ const Hero = ({ img, title }) => {
             {title}
           </p>
         </div>
-        <LinkBTN text={"VISIT OFFICIAL SITE"} link={'https://www.liverpool.com/'} />
+        {/* <LinkBTN text={"VISIT OFFICIAL SITE"} link={'https://www.liverpool.com/'} /> */}
       </div>
       <Mantra text={'You Will Never Walk Alone'}/>
     </div>
