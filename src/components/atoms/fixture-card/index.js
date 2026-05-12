@@ -1,10 +1,15 @@
-import styles from './fixture-card.module.css';
+import styles from "./fixture-card.module.css";
 
-const FixtureCard = ({games, setIsHovering, setHoveredTeam, setClickedMonth}) => {
-  const onMouseEnter = ({target}) => {
-    const team = target.children[1].innerHTML;
-    setHoveredTeam(team)
-    setIsHovering(true)
+const FixtureCard = ({
+  games,
+  setIsHovering,
+  setHoveredTeam,
+  setClickedMonth,
+}) => {
+  const onMouseEnter = ({ target }) => {
+    const team = target?.children[1]?.innerHTML;
+    setHoveredTeam(team);
+    setIsHovering(true);
   };
 
   const onMouseLeave = () => setIsHovering(false);
@@ -13,16 +18,17 @@ const FixtureCard = ({games, setIsHovering, setHoveredTeam, setClickedMonth}) =>
     setClickedMonth(null);
   };
 
-  return (  
-    <div className={styles.container}>
-       <div className={styles.exit} onClick={closeHud}>
+  return (
+    <div className={styles.container} data-testid="fixture-card">
+      <div className={styles.exit} role="button" onClick={closeHud}>
         X
       </div>
-      {games.map((game) => {
+      {games.map((game, i) => {
         return (
           <div
             className={styles.game}
-            key={`fixture-${game.team}`}
+            data-testid="game"
+            key={`fixture-${game.team}-${i}`}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
@@ -30,10 +36,10 @@ const FixtureCard = ({games, setIsHovering, setHoveredTeam, setClickedMonth}) =>
             <p>{game.team}</p>
             <p>{game.side}</p>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 };
 
 export { FixtureCard };

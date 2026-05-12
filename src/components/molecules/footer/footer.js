@@ -3,10 +3,11 @@ import styles from "./footer.module.css";
 import { IconTray } from "@/components/atoms/icon-tray/icon-tray";
 import { utilities, links } from "@/app/config";
 import { LinkBTN } from "@/components/atoms/link-button";
+import { icons } from "@/assets/icons";
 
 const Footer = () => {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <ul className={styles.links}>
         {links.map(({text, link}) => {
           return <LinkBTN 
@@ -18,10 +19,10 @@ const Footer = () => {
       </ul>
       <div className={styles.socials}>
         <h5>Follow Us</h5>
-        <IconTray/> 
+        <IconTray icons={icons}/> 
       </div>
       <UtilLinks links={utilities}/>
-    </main>
+    </div>
   );
 };
 

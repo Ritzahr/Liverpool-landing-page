@@ -3,14 +3,13 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
 import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   dir: './',
 })
 
-const config: Config = {
+const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -31,6 +30,7 @@ const config: Config = {
 
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
