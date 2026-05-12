@@ -7,7 +7,7 @@ const FixtureCard = ({
   setClickedMonth,
 }) => {
   const onMouseEnter = ({ target }) => {
-    const team = target.children[1].innerHTML;
+    const team = target?.children[1]?.innerHTML;
     setHoveredTeam(team);
     setIsHovering(true);
   };
@@ -23,12 +23,12 @@ const FixtureCard = ({
       <div className={styles.exit} role="button" onClick={closeHud}>
         X
       </div>
-      {games.map((game) => {
+      {games.map((game, i) => {
         return (
           <div
             className={styles.game}
             data-testid="game"
-            key={`fixture-${game.team}`}
+            key={`fixture-${game.team}-${i}`}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >

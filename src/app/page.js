@@ -14,12 +14,13 @@ import { GameFixturesSection } from "@/components/molecules/game-fixtures-sectio
 export default function Home() {
   return (
     <main> 
-      <div className={styles.container}> 
-          <Hero img={heroImg} title={"The Official Unofficial Liverpool Football Club Landing Page!"}/>
-          <RowImage img={teamImages} text={"Game Fixtures"} />
-          <GameFixturesSection/>
-          <SquadRow img={[rowImage3]} />
-          <Cardsection/>
+      <div className={styles.container}>
+        <div className={styles.nav}>BOOM</div>
+        <Hero img={heroImg} title={"The Official Unofficial Liverpool Football Club Landing Page!"}/>
+        <RowImage img={teamImages} text={"Game Fixtures"} />
+        <GameFixturesSection/>
+        <SquadRow img={[rowImage3]} />
+        <Cardsection/>
       </div>
       <Footer/>
     </main>

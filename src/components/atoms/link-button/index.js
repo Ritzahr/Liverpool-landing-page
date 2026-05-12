@@ -16,4 +16,4 @@ const LinkBTN = ({text, link}) => {
   )
 }
 
-export { LinkBTN }
+export { LinkBTN };

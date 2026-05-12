@@ -1,8 +1,7 @@
 import styles from "./icon-tray.module.css";
-import { icons } from "@/assets/icons";
 import Image from "next/image";
 
-const IconTray = () => {
+const IconTray = ({ icons }) => {
   return (
     <div className={styles.icons}>
       {icons.map((icon, i) => {
